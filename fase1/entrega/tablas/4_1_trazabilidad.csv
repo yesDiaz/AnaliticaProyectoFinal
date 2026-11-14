@@ -1,0 +1,10 @@
+paso,registros,registros_validos,estaciones,pares_estacion_anio,nota
+0. crudo 1981-2013,1930611,1930611,323,5514,estaciones disponibles solo hasta 2003
+1. fechas validas,1930611,1930611,323,5514,eliminados 0 registros con fecha imposible
+1b. sin duplicados,1930611,1930611,323,5514,0 registros duplicados estacion-fecha colapsados
+2. valores imposibles,1930611,1930561,323,5514,0 negativos y 50 > 300.0 mm -> NaN
+3. totales mensuales en un dia,1930611,1928583,323,5514,"80 estacion-mes anulados (53 por regla 3a, 27 por regla 3b fin de mes)"
+4. ceros falsos,1930611,1910369,323,5514,321 rachas >= 45 dias (18214 registros) -> NaN
+5. cobertura minima,1632635,1632582,305,4481,>= 330 dias validos y hueco <= 15 dias
+6. estaciones con historia,1299927,1299875,186,3567,>= 15 anios validos
+7. imputacion huecos cortos,1299927,1299927,186,3567,"52 valores interpolados, quedan 0 NaN"

@@ -1,0 +1,33 @@
+crudo total: 2992694 registros, 344 estaciones, 1930-2003
+[0. crudo 1981-2013] registros=1930611 validos=1930611 estaciones=323 pares=5514  estaciones disponibles solo hasta 2003
+[1. fechas validas] registros=1930611 validos=1930611 estaciones=323 pares=5514  eliminados 0 registros con fecha imposible
+[1b. sin duplicados] registros=1930611 validos=1930611 estaciones=323 pares=5514  0 registros duplicados estacion-fecha colapsados
+[2. valores imposibles] registros=1930611 validos=1930561 estaciones=323 pares=5514  0 negativos y 50 > 300.0 mm -> NaN
+[3. totales mensuales en un dia] registros=1930611 validos=1928583 estaciones=323 pares=5514  80 estacion-mes anulados (53 por regla 3a, 27 por regla 3b fin de mes)
+[4. ceros falsos] registros=1930611 validos=1910369 estaciones=323 pares=5514  321 rachas >= 45 dias (18214 registros) -> NaN
+
+pares evaluados=5514 aceptados=4481 rechazados=1033
+[5. cobertura minima] registros=1632635 validos=1632582 estaciones=305 pares=4481  >= 330 dias validos y hueco <= 15 dias
+[6. estaciones con historia] registros=1299927 validos=1299875 estaciones=186 pares=3567  >= 15 anios validos
+[7. imputacion huecos cortos] registros=1299927 validos=1299927 estaciones=186 pares=3567  52 valores interpolados, quedan 0 NaN
+
+===== TABLA DE TRAZABILIDAD =====
+                          paso  registros  registros_validos  estaciones  pares_estacion_anio                                                                   nota
+            0. crudo 1981-2013    1930611            1930611         323                 5514                                 estaciones disponibles solo hasta 2003
+             1. fechas validas    1930611            1930611         323                 5514                             eliminados 0 registros con fecha imposible
+            1b. sin duplicados    1930611            1930611         323                 5514                       0 registros duplicados estacion-fecha colapsados
+         2. valores imposibles    1930611            1930561         323                 5514                                     0 negativos y 50 > 300.0 mm -> NaN
+3. totales mensuales en un dia    1930611            1928583         323                 5514 80 estacion-mes anulados (53 por regla 3a, 27 por regla 3b fin de mes)
+               4. ceros falsos    1930611            1910369         323                 5514                         321 rachas >= 45 dias (18214 registros) -> NaN
+           5. cobertura minima    1632635            1632582         305                 4481                                 >= 330 dias validos y hueco <= 15 dias
+    6. estaciones con historia    1299927            1299875         186                 3567                                                    >= 15 anios validos
+   7. imputacion huecos cortos    1299927            1299927         186                 3567                                  52 valores interpolados, quedan 0 NaN
+
+guardado: entrega/estaciones_depuradas.csv (1299927 filas)
+resumen final: {'estaciones': 186, 'pares': 3567, 'anio_min': 1981, 'anio_max': 2003, 'media_mm_dia': 5.318, 'pct_ceros': 59.0}
+
+zonas hidrograficas presentes:
+ZONA  estaciones   pares
+  26         164 1163706
+  53          11   65485
+  54          11   70736
