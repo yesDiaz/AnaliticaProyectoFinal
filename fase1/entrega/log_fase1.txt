@@ -1,0 +1,104 @@
+== cargando estaciones depuradas (salida de la fase 4.1) ==
+   1299927 registros | 186 estaciones | 3567 pares estacion-anio
+   muestra para elegir base/K/lambda: 60 pares (semilla 42)
+
+== seleccion de base y K (estaciones) ==
+   bspline  K=  4  ECM=3.0597  VC=3.1262  VCG=3.1280
+   bspline  K=  5  ECM=2.9936  VC=3.0746  VCG=3.0775
+   bspline  K=  6  ECM=2.9425  VC=3.0390  VCG=3.0418
+   bspline  K=  7  ECM=2.9316  VC=3.0450  VCG=3.0475
+   bspline  K=  8  ECM=2.9127  VC=3.0420  VCG=3.0448
+   bspline  K=  9  ECM=2.9008  VC=3.0458  VCG=3.0495
+   bspline  K= 10  ECM=2.8911  VC=3.0520  VCG=3.0564
+   bspline  K= 12  ECM=2.8606  VC=3.0518  VCG=3.0586
+   bspline  K= 15  ECM=2.8034  VC=3.0440  VCG=3.0491
+   bspline  K= 20  ECM=2.7312  VC=3.0470  VCG=3.0574
+   bspline  K= 25  ECM=2.6508  VC=3.0465  VCG=3.0554
+   bspline  K= 30  ECM=2.5761  VC=3.0526  VCG=3.0586
+   bspline  K= 40  ECM=2.4490  VC=3.0913  VCG=3.0897
+   bspline  K= 50  ECM=2.3330  VC=3.1466  VCG=3.1335
+   bspline  K= 73  ECM=2.0970  VC=3.3316  VCG=3.2781
+   fourier  K=  3  ECM=3.0853  VC=3.1367  VCG=3.1367
+   fourier  K=  5  ECM=2.9573  VC=3.0401  VCG=3.0401
+   fourier  K=  7  ECM=2.9260  VC=3.0417  VCG=3.0417
+   fourier  K=  9  ECM=2.9033  VC=3.0521  VCG=3.0521
+   fourier  K= 11  ECM=2.8683  VC=3.0496  VCG=3.0495
+   fourier  K= 13  ECM=2.8397  VC=3.0536  VCG=3.0535
+   fourier  K= 15  ECM=2.8071  VC=3.0531  VCG=3.0531
+   fourier  K= 21  ECM=2.7095  VC=3.0509  VCG=3.0508
+   fourier  K= 31  ECM=2.5748  VC=3.0759  VCG=3.0755
+   fourier  K= 41  ECM=2.4285  VC=3.0835  VCG=3.0828
+   fourier  K= 51  ECM=2.3173  VC=3.1335  VCG=3.1322
+   fourier  K= 73  ECM=2.0866  VC=3.2641  VCG=3.2620
+   -> base elegida por VCG: fourier con K=5 (VCG=3.0401)
+      mejor VCG con bspline: 3.0418
+      mejor VCG con fourier: 3.0401
+
+== verificacion de la matriz de suavizado S ==
+   max|S@S - S| = 3.469e-17   (debe ser ~0: S es proyeccion)
+   tr(S) = 5.000000   K = 5   |tr(S)-K| = 0.000e+00
+   S simetrica: max|S - S^T| = 5.204e-18
+
+== seleccion de lambda con penalizacion de rugosidad ==
+   lambda=   0e+00  nu=tr(S_l)=  5.000  ECM=2.0664  VC=2.1242  VCG=2.1242
+   lambda=   1e-02  nu=tr(S_l)=  5.000  ECM=2.0664  VC=2.1242  VCG=2.1242
+   lambda=   1e+00  nu=tr(S_l)=  5.000  ECM=2.0664  VC=2.1242  VCG=2.1242
+   lambda=   1e+02  nu=tr(S_l)=  5.000  ECM=2.0664  VC=2.1242  VCG=2.1242
+   lambda=   1e+04  nu=tr(S_l)=  4.971  ECM=2.0665  VC=2.1239  VCG=2.1239
+   lambda=   1e+05  nu=tr(S_l)=  4.736  ECM=2.0671  VC=2.1218  VCG=2.1218
+   lambda=   1e+06  nu=tr(S_l)=  3.670  ECM=2.0804  VC=2.1229  VCG=2.1229
+   lambda=   1e+07  nu=tr(S_l)=  2.198  ECM=2.1059  VC=2.1315  VCG=2.1315
+   lambda=   1e+08  nu=tr(S_l)=  1.219  ECM=2.1215  VC=2.1357  VCG=2.1357
+   lambda=   1e+10  nu=tr(S_l)=  1.000  ECM=2.1256  VC=2.1373  VCG=2.1373
+   lambda=   1e+12  nu=tr(S_l)=  0.785  ECM=2.1508  VC=2.1600  VCG=2.1600
+   -> lambda elegido por VCG: 100000  (nu = 4.736)
+
+== bandas de confianza punto a punto ==
+   sigma^2 residual = 2.0951 | EE medio = 0.1694 | ancho medio de banda = 0.6641 (escala sqrt mm)
+   empalme 31-dic/1-ene: |curva(365)-curva(0)| = 0.0000
+
+== control de bimodalidad y periodicidad del perfil medio ==
+   fourier  K=  5 picos=2 dias=[112.0, 304.0] salto_31dic_1ene=0.0000 ECM=0.0379
+   fourier  K=  7 picos=2 dias=[112.0, 303.0] salto_31dic_1ene=0.0000 ECM=0.0370
+   bspline  K=  6 picos=2 dias=[113.0, 317.0] salto_31dic_1ene=0.4136 ECM=0.0495
+
+== coeficientes funcionales de todas las curvas de estaciones ==
+   3567 curvas (estacion-anio) con 5 coeficientes [base fourier, lambda 100000]
+
+== fuente satelital (GeoTIFF pentadales) ==
+   2328 rasteres | malla 39x37 | res 0.05 grados
+   anios satelitales: 1981-2013 | completos (72 pentadas): 32 | incompletos: [2013]
+   pixel demo fila=19 col=18 -> lon=-76.625 lat=4.025
+
+== seleccion de base y K (satelite, 72 observaciones/anio) ==
+   bspline  K=  4  ECM=0.3563  VC=0.3937  VCG=0.3995
+   bspline  K=  5  ECM=0.3320  VC=0.3804  VCG=0.3834
+   bspline  K=  6  ECM=0.2682  VC=0.3280  VCG=0.3192
+   bspline  K=  7  ECM=0.2721  VC=0.3394  VCG=0.3339
+   bspline  K=  8  ECM=0.2216  VC=0.2763  VCG=0.2804
+   bspline  K=  9  ECM=0.2221  VC=0.2876  VCG=0.2900
+   bspline  K= 10  ECM=0.2203  VC=0.3031  VCG=0.2970
+   bspline  K= 12  ECM=0.2014  VC=0.3262  VCG=0.2900
+   bspline  K= 15  ECM=0.1973  VC=0.3569  VCG=0.3149
+   bspline  K= 20  ECM=0.1757  VC=0.3497  VCG=0.3369
+   bspline  K= 25  ECM=0.1493  VC=0.5717  VCG=0.3504
+   bspline  K= 30  ECM=0.1305  VC=1.0766  VCG=0.3835
+   fourier  K=  3  ECM=0.4258  VC=0.4636  VCG=0.4636
+   fourier  K=  5  ECM=0.2381  VC=0.2748  VCG=0.2749
+   fourier  K=  7  ECM=0.2285  VC=0.2802  VCG=0.2804
+   fourier  K=  9  ECM=0.2191  VC=0.2861  VCG=0.2862
+   fourier  K= 11  ECM=0.2067  VC=0.2880  VCG=0.2880
+   fourier  K= 13  ECM=0.2008  VC=0.2991  VCG=0.2990
+   fourier  K= 15  ECM=0.1955  VC=0.3121  VCG=0.3119
+   fourier  K= 21  ECM=0.1677  VC=0.3340  VCG=0.3342
+   fourier  K= 31  ECM=0.1361  VC=0.4207  VCG=0.4198
+   -> base elegida por VCG: fourier con K=5 (VCG=0.2749)
+   verificacion satelite: max|SS-S|=6.939e-17 tr(S)=5.0000 (K=5)
+
+== coeficientes satelitales por pixel-anio (anios completos) ==
+   46176 curvas pixel-anio con 5 coeficientes [base fourier]
+
+===== FASE 1 TERMINADA =====
+estaciones: base fourier K=5 lambda=100000 | satelite: base fourier K=5
+numpy 1.26.4 | pandas 2.1.4 | matplotlib 3.6.3 | semilla 42
+EXIT=0
