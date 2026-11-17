@@ -1,0 +1,412 @@
+
+##########################################################################
+# BLOQUE 1/6: Fase 1b - preprocesamiento y depuracion (4.1)
+##########################################################################
+crudo total: 2992694 registros, 344 estaciones, 1930-2003
+[0. crudo 1981-2013] registros=1930611 validos=1930611 estaciones=323 pares=5514  estaciones disponibles solo hasta 2003
+/srv/mark02/analitica-final/proyecto_final_python.py:113: Pandas4Warning: Series.dt.dayofyear is deprecated and will be removed in a future version. Use Series.dt.day_of_year instead.
+  df["DOY"] = df.FECHA.dt.dayofyear
+[1. fechas validas] registros=1930611 validos=1930611 estaciones=323 pares=5514  eliminados 0 registros con fecha imposible
+[1b. sin duplicados] registros=1930611 validos=1930611 estaciones=323 pares=5514  0 registros duplicados estacion-fecha colapsados
+[2. valores imposibles] registros=1930611 validos=1930561 estaciones=323 pares=5514  0 negativos y 50 > 300.0 mm -> NaN
+[3. totales mensuales en un dia] registros=1930611 validos=1928583 estaciones=323 pares=5514  80 estacion-mes anulados (53 por regla 3a, 27 por regla 3b fin de mes)
+[4. ceros falsos] registros=1930611 validos=1910369 estaciones=323 pares=5514  321 rachas >= 45 dias (18214 registros) -> NaN
+
+pares evaluados=5514 aceptados=4481 rechazados=1033
+[5. cobertura minima] registros=1632635 validos=1632582 estaciones=305 pares=4481  >= 330 dias validos y hueco <= 15 dias
+[6. estaciones con historia] registros=1299927 validos=1299875 estaciones=186 pares=3567  >= 15 anios validos
+[7. imputacion huecos cortos] registros=1299927 validos=1299927 estaciones=186 pares=3567  52 valores interpolados, quedan 0 NaN
+
+===== TABLA DE TRAZABILIDAD =====
+                          paso  registros  registros_validos  estaciones  pares_estacion_anio                                                                   nota
+            0. crudo 1981-2013    1930611            1930611         323                 5514                                 estaciones disponibles solo hasta 2003
+             1. fechas validas    1930611            1930611         323                 5514                             eliminados 0 registros con fecha imposible
+            1b. sin duplicados    1930611            1930611         323                 5514                       0 registros duplicados estacion-fecha colapsados
+         2. valores imposibles    1930611            1930561         323                 5514                                     0 negativos y 50 > 300.0 mm -> NaN
+3. totales mensuales en un dia    1930611            1928583         323                 5514 80 estacion-mes anulados (53 por regla 3a, 27 por regla 3b fin de mes)
+               4. ceros falsos    1930611            1910369         323                 5514                         321 rachas >= 45 dias (18214 registros) -> NaN
+           5. cobertura minima    1632635            1632582         305                 4481                                 >= 330 dias validos y hueco <= 15 dias
+    6. estaciones con historia    1299927            1299875         186                 3567                                                    >= 15 anios validos
+   7. imputacion huecos cortos    1299927            1299927         186                 3567                                  52 valores interpolados, quedan 0 NaN
+
+guardado: entrega/estaciones_depuradas.csv (1299927 filas)
+resumen final: {'estaciones': 186, 'pares': 3567, 'anio_min': 1981, 'anio_max': 2003, 'media_mm_dia': 5.318, 'pct_ceros': 59.0}
+
+zonas hidrograficas presentes:
+ZONA  estaciones   pares
+  26         164 1163706
+  53          11   65485
+  54          11   70736
+
+##########################################################################
+# BLOQUE 2/6: Fase 1 - construccion de datos funcionales
+##########################################################################
+== cargando estaciones depuradas (salida de la fase 4.1) ==
+   1299927 registros | 186 estaciones | 3567 pares estacion-anio
+   muestra para elegir base/K/lambda: 60 pares (semilla 42)
+
+== seleccion de base y K (estaciones) ==
+   bspline  K=  4  ECM=3.0597  VC=3.1262  VCG=3.1280
+   bspline  K=  5  ECM=2.9936  VC=3.0746  VCG=3.0775
+   bspline  K=  6  ECM=2.9425  VC=3.0390  VCG=3.0418
+   bspline  K=  7  ECM=2.9316  VC=3.0450  VCG=3.0475
+   bspline  K=  8  ECM=2.9127  VC=3.0420  VCG=3.0448
+   bspline  K=  9  ECM=2.9008  VC=3.0458  VCG=3.0495
+   bspline  K= 10  ECM=2.8911  VC=3.0520  VCG=3.0564
+   bspline  K= 12  ECM=2.8606  VC=3.0518  VCG=3.0586
+   bspline  K= 15  ECM=2.8034  VC=3.0440  VCG=3.0491
+   bspline  K= 20  ECM=2.7312  VC=3.0470  VCG=3.0574
+   bspline  K= 25  ECM=2.6508  VC=3.0465  VCG=3.0554
+   bspline  K= 30  ECM=2.5761  VC=3.0526  VCG=3.0586
+   bspline  K= 40  ECM=2.4490  VC=3.0913  VCG=3.0897
+   bspline  K= 50  ECM=2.3330  VC=3.1466  VCG=3.1335
+   bspline  K= 73  ECM=2.0970  VC=3.3316  VCG=3.2781
+   fourier  K=  3  ECM=3.0853  VC=3.1367  VCG=3.1367
+   fourier  K=  5  ECM=2.9573  VC=3.0401  VCG=3.0401
+   fourier  K=  7  ECM=2.9260  VC=3.0417  VCG=3.0417
+   fourier  K=  9  ECM=2.9033  VC=3.0521  VCG=3.0521
+   fourier  K= 11  ECM=2.8683  VC=3.0496  VCG=3.0495
+   fourier  K= 13  ECM=2.8397  VC=3.0536  VCG=3.0535
+   fourier  K= 15  ECM=2.8071  VC=3.0531  VCG=3.0531
+   fourier  K= 21  ECM=2.7095  VC=3.0509  VCG=3.0508
+   fourier  K= 31  ECM=2.5748  VC=3.0759  VCG=3.0755
+   fourier  K= 41  ECM=2.4285  VC=3.0835  VCG=3.0828
+   fourier  K= 51  ECM=2.3173  VC=3.1335  VCG=3.1322
+   fourier  K= 73  ECM=2.0866  VC=3.2641  VCG=3.2620
+   -> base elegida por VCG: fourier con K=5 (VCG=3.0401)
+      mejor VCG con bspline: 3.0418
+      mejor VCG con fourier: 3.0401
+
+== verificacion de la matriz de suavizado S ==
+   max|S@S - S| = 1.908e-17   (debe ser ~0: S es proyeccion)
+   tr(S) = 5.000000   K = 5   |tr(S)-K| = 0.000e+00
+   S simetrica: max|S - S^T| = 5.204e-18
+
+== seleccion de lambda con penalizacion de rugosidad ==
+   lambda=   0e+00  nu=tr(S_l)=  5.000  ECM=2.0664  VC=2.1242  VCG=2.1242
+   lambda=   1e-02  nu=tr(S_l)=  5.000  ECM=2.0664  VC=2.1242  VCG=2.1242
+   lambda=   1e+00  nu=tr(S_l)=  5.000  ECM=2.0664  VC=2.1242  VCG=2.1242
+   lambda=   1e+02  nu=tr(S_l)=  5.000  ECM=2.0664  VC=2.1242  VCG=2.1242
+   lambda=   1e+04  nu=tr(S_l)=  4.971  ECM=2.0665  VC=2.1239  VCG=2.1239
+   lambda=   1e+05  nu=tr(S_l)=  4.736  ECM=2.0671  VC=2.1218  VCG=2.1218
+   lambda=   1e+06  nu=tr(S_l)=  3.670  ECM=2.0804  VC=2.1229  VCG=2.1229
+   lambda=   1e+07  nu=tr(S_l)=  2.198  ECM=2.1059  VC=2.1315  VCG=2.1315
+   lambda=   1e+08  nu=tr(S_l)=  1.219  ECM=2.1215  VC=2.1357  VCG=2.1357
+   lambda=   1e+10  nu=tr(S_l)=  1.000  ECM=2.1256  VC=2.1373  VCG=2.1373
+   lambda=   1e+12  nu=tr(S_l)=  0.785  ECM=2.1508  VC=2.1600  VCG=2.1600
+   -> lambda elegido por VCG: 100000  (nu = 4.736)
+
+== bandas de confianza punto a punto ==
+   sigma^2 residual = 2.0951 | EE medio = 0.1694 | ancho medio de banda = 0.6641 (escala sqrt mm)
+   empalme 31-dic/1-ene: |curva(365)-curva(0)| = 0.0000
+
+== control de bimodalidad y periodicidad del perfil medio ==
+   fourier  K=  5 picos=2 dias=[112.0, 304.0] salto_31dic_1ene=0.0000 ECM=0.0379
+   fourier  K=  7 picos=2 dias=[112.0, 303.0] salto_31dic_1ene=0.0000 ECM=0.0370
+   bspline  K=  6 picos=2 dias=[113.0, 317.0] salto_31dic_1ene=0.4136 ECM=0.0495
+
+== coeficientes funcionales de todas las curvas de estaciones ==
+   3567 curvas (estacion-anio) con 5 coeficientes [base fourier, lambda 100000]
+
+== fuente satelital (GeoTIFF pentadales) ==
+   2328 rasteres | malla 39x37 | res 0.05 grados
+   anios satelitales: 1981-2013 | completos (72 pentadas): 32 | incompletos: [2013]
+   pixel demo fila=19 col=18 -> lon=-76.625 lat=4.025
+
+== seleccion de base y K (satelite, 72 observaciones/anio) ==
+   bspline  K=  4  ECM=0.3563  VC=0.3937  VCG=0.3995
+   bspline  K=  5  ECM=0.3320  VC=0.3804  VCG=0.3834
+   bspline  K=  6  ECM=0.2682  VC=0.3280  VCG=0.3192
+   bspline  K=  7  ECM=0.2721  VC=0.3394  VCG=0.3339
+   bspline  K=  8  ECM=0.2216  VC=0.2763  VCG=0.2804
+   bspline  K=  9  ECM=0.2221  VC=0.2876  VCG=0.2900
+   bspline  K= 10  ECM=0.2203  VC=0.3031  VCG=0.2970
+   bspline  K= 12  ECM=0.2014  VC=0.3262  VCG=0.2900
+   bspline  K= 15  ECM=0.1973  VC=0.3569  VCG=0.3149
+   bspline  K= 20  ECM=0.1757  VC=0.3497  VCG=0.3369
+   bspline  K= 25  ECM=0.1493  VC=0.5717  VCG=0.3504
+   bspline  K= 30  ECM=0.1305  VC=1.0766  VCG=0.3835
+   fourier  K=  3  ECM=0.4258  VC=0.4636  VCG=0.4636
+   fourier  K=  5  ECM=0.2381  VC=0.2748  VCG=0.2749
+   fourier  K=  7  ECM=0.2285  VC=0.2802  VCG=0.2804
+   fourier  K=  9  ECM=0.2191  VC=0.2861  VCG=0.2862
+   fourier  K= 11  ECM=0.2067  VC=0.2880  VCG=0.2880
+   fourier  K= 13  ECM=0.2008  VC=0.2991  VCG=0.2990
+   fourier  K= 15  ECM=0.1955  VC=0.3121  VCG=0.3119
+   fourier  K= 21  ECM=0.1677  VC=0.3340  VCG=0.3342
+   fourier  K= 31  ECM=0.1361  VC=0.4207  VCG=0.4198
+   -> base elegida por VCG: fourier con K=5 (VCG=0.2749)
+   verificacion satelite: max|SS-S|=6.939e-17 tr(S)=5.0000 (K=5)
+
+== coeficientes satelitales por pixel-anio (anios completos) ==
+   46176 curvas pixel-anio con 5 coeficientes [base fourier]
+
+===== FASE 1 TERMINADA =====
+estaciones: base fourier K=5 lambda=100000 | satelite: base fourier K=5
+numpy 2.5.4 | pandas 3.1.1 | matplotlib 3.11.2 | semilla 42
+
+##########################################################################
+# BLOQUE 3/6: Fase 3.0 - reajuste pentadal (comparabilidad de escalas)
+##########################################################################
+========================================================================
+FASE 3.0 - reajuste pentadal de las curvas de estacion
+========================================================================
+    registros diarios: 1,299,927 | estaciones: 186 | anios: 1981-2003
+    pentadas validas (>= 3 dias con dato): 256,409
+    curvas reajustadas: 3567 (estaciones 186, 1981-2003)
+    ajuste: R2 mediano 0.184 | RMSE mediano 1.0908 sqrt(mm/dia)
+
+    efecto Jensen medido en 3567 curvas comunes:
+      integral con ajuste pentadal :    1483 mm/anio
+      integral con ajuste diario   :     810 mm/anio
+      acumulado observado real     :    1939 mm/anio
+      razon pentadal/diario 2.14 | sesgo pentadal vs observado -23.5 % | sesgo diario vs observado -58.2 %
+    => el ajuste pentadal es el que hay que comparar contra el satelital,
+       porque comparte su pre-procesamiento exacto.
+
+##########################################################################
+# BLOQUE 4/6: Fase 2 - analisis exploratorio funcional
+##########################################################################
+==============================================================================
+FASE 2 - ANALISIS EXPLORATORIO FUNCIONAL
+numpy 2.5.4 | pandas 3.1.1 | matplotlib 3.11.2
+skfda 0.10.1 (solo para VERIFICAR lo calculado a mano)
+==============================================================================
+
+[1] curvas estacion-anio: 3567 (186 estaciones, 1981-2003)
+    curvas pixel-anio:    46176 (1443 pixeles, 1981-2012)
+    las dos fuentes comparten base (Fourier K=5) y dominio t en [0,365]
+    acumulado observado medio 1938 mm/anio vs reconstruido 810 mm/anio (sesgo -1128 mm, -58.2 %; factor de escala 2.39)
+    -> el suavizado con K=5 elimina la varianza diaria de alta frecuencia; la curva
+       describe la FORMA estacional, no el total. Para totales se usa el observado.
+
+[2] media funcional
+    estaciones: max|manual - Phi(t)c_barra| = 6.661e-15
+    estaciones: max|manual - numpy.mean|    = 0.000e+00
+    estaciones: max|manual - skfda.mean|    = 0.000e+00
+    satelite:   max|manual - Phi(t)c_barra| = 4.574e-14
+
+[3] varianza, covarianza y correlacion funcional
+    traza de la covarianza (varianza total integrada): estaciones 184.55 | satelite 273.68  (escala sqrt mm)^2
+    desv. estandar funcional: estaciones min 0.606 (dia 77) max 0.785 (dia 316)
+    correlacion ene-abr (dia 15 vs 105): estaciones 0.736 | satelite 0.889
+    correlacion abr-oct (dia 105 vs 300): estaciones 0.775 | satelite 0.923
+
+[4] derivadas e inicio/fin de temporadas
+    estaciones: maximos en dias [111.4, 304.3] (['22-abr', '01-nov'])
+    estaciones: minimos en dias [27.3, 206.6] (['28-ene', '26-jul'])
+    satelite:   maximos en dias [126.2, 300.7] (['07-may', '28-oct'])
+    satelite:   minimos en dias [33.6, 210.0] (['03-feb', '30-jul'])
+    nivel medio anual: estaciones 1.273 | satelite 2.867 (sqrt mm/dia)
+    temporadas estaciones: inicios ['06-mar', '15-sep'] | finales ['03-jun', '22-dic']
+    temporadas satelite:   inicios ['26-mar', '04-sep'] | finales ['21-jun', '17-dic']
+
+[5] profundidad funcional y boxplot funcional
+    estaciones: FM  min 0.5003 max 0.9646 | MBD min 0.0012 max 0.4965
+    correlacion de Spearman FM vs MBD: 0.9893
+    verificacion contra skfda (n=400): max|MBD_manual - MBD_skfda| = 8.050e-05
+    verificacion contra skfda (n=400): max|FM_manual  - FM_skfda|  = 1.087e-04
+    atipicas (estaciones): 54 de 3567 curvas (1.51 %)
+    curva mediana (MBD maxima): estacion 2613600103 anio 2003
+    top 5 menos profundas (MBD):
+      estacion 5300900102 anio 1988  MBD=0.0012  acumulado observado=  20530 mm
+      estacion 5300900102 anio 1985  MBD=0.0017  acumulado observado=  19444 mm
+      estacion 5300900102 anio 1984  MBD=0.0020  acumulado observado=  23818 mm
+      estacion 5300900102 anio 1986  MBD=0.0034  acumulado observado=  19328 mm
+      estacion 5300900102 anio 1987  MBD=0.0037  acumulado observado=  15837 mm
+    atipicas por anio (top): {1993: 5, 1996: 5, 1988: 4, 1994: 4, 1998: 4, 2002: 4}
+    atipicas (satelite): 0 de 46176 (0.00 %)
+
+[6] variabilidad interanual y ENSO
+    serie Nino 3.4 cargada: 1948-2026
+    acumulado anual medio: 1939 mm (min 1556 en 1992, max 2398 en 1984)
+    correlacion de Spearman acumulado anual vs ONI DJF: -0.270 (n=23 anios)
+    correlacion de Spearman acumulado anual vs ONI medio anual: -0.403 (clasificacion mas pertinente para el anio civil de lluvia)
+    medias por fase ENSO segun ONI medio anual (mm/anio):
+      El Nino   n= 6     1812 mm  anios [1982, 1987, 1991, 1992, 1997, 2002]
+      La Nina   n= 6     2113 mm  anios [1984, 1985, 1988, 1989, 1999, 2000]
+      Neutro    n=11     1914 mm  anios [1981, 1983, 1986, 1990, 1993, 1994, 1995, 1996, 1998, 2001, 2003]
+
+[7] gradiente orografico (fuente satelital, 1.443 pixeles)
+    acumulado anual por pixel: min 1013 mm | mediana 3074 mm | max 6170 mm
+    media vertiente pacifica (lon <= -76.8): 5080 mm | valle interandino (-76.5 a -75.9): 1855 mm | razon 2.74
+    Spearman acumulado vs longitud: -0.813 (negativo = mas lluvia al occidente)
+
+[8] FPCA funcional (implementado a mano, verificado contra skfda)
+    varianza explicada: PC1 79.6%  PC2 10.0%  PC3 5.0%  PC4 3.4%  PC5 2.0%  (acumulada PC1-PC2 89.6%)
+    ortonormalidad: max|<xi_i,xi_j> - delta_ij| = 1.11e-15
+    varianza de los scores vs autovalores: max dif = 1.42e-13
+    skfda varianza explicada: PC1 79.6%  PC2 10.0%  PC3 5.0%
+    |corr(scores PC1 manual, skfda)| = 1.000000
+    |corr(scores PC2 manual, skfda)| = 1.000000
+    |corr(scores PC3 manual, skfda)| = 1.000000
+    Spearman PC1 vs acumulado observado: 0.921
+
+[9] validacion de la representacion funcional contra el dato observado
+    n=3567 curvas | RMSE 1234 mm | r Pearson 0.9730 | rho Spearman 0.9271 | sesgo -1128 mm
+    la correlacion alta con sesgo sistematico confirma que la curva preserva el
+    ordenamiento y la forma (lo que usan las fases 2-4) y no el total acumulado.
+
+[fin] figuras en entrega/figs/fase2_*.png, tablas en entrega/tablas/fase2_*.csv
+semilla 20262 | python 3.12.3
+
+##########################################################################
+# BLOQUE 5/6: Fase 3 - comparacion estaciones vs satelital
+##########################################################################
+========================================================================
+FASE 3 - Comparacion estaciones vs satelital  (semilla 20263)
+========================================================================
+
+[1] coordenada aproximada por subzona hidrografica
+    subzonas en los datos: 17 | con registros en el CNE: 13
+    incertidumbre mediana del centroide: 10 km en lon, 24 km en lat
+      2610  n_CNE= 429  ( -76.100,  4.267)  alt=   952 m  Valle Del Cauca  EN MALLA
+      2611  n_CNE= 210  ( -76.100,  4.533)  alt=   975 m  Valle Del Cauca  EN MALLA
+      2612  n_CNE= 513  ( -75.717,  4.556)  alt=  1480 m  Quindío          EN MALLA
+      2613  n_CNE= 398  ( -75.652,  4.850)  alt=  1520 m  Risaralda        EN MALLA
+      2614  n_CNE= 269  ( -75.865,  5.150)  alt=  1430 m  Risaralda        fuera
+      2615  n_CNE= 486  ( -75.500,  5.050)  alt=  2032 m  Caldas           fuera
+      2620  n_CNE= 216  ( -75.709,  6.055)  alt=  1575 m  Antioquia        fuera
+      2621  n_CNE=  80  ( -75.896,  6.350)  alt=  1739 m  Antioquia        fuera
+      2622  n_CNE=  51  ( -75.833,  6.729)  alt=  1500 m  Antioquia        fuera
+      2623  n_CNE= 117  ( -75.683,  6.880)  alt=  1100 m  Antioquia        fuera
+      2624  n_CNE=  78  ( -75.361,  7.692)  alt=    88 m  Antioquia        fuera
+      2625  n_CNE=  48  ( -75.346,  7.539)  alt=   148 m  Antioquia        fuera
+      5301  n_CNE=   6  ( -78.411,  2.519)  alt=   115 m  Nariño           fuera
+
+    [HALLAZGO] estaciones dentro del dominio satelital: 65 de 186 (35 %)
+    el resto pertenece al Cauca medio-bajo (Antioquia) y al Patia/Pacifico sur,
+    fuera de la malla del producto satelital: los dos conjuntos de datos del
+    proyecto NO cubren la misma region. La comparacion pareada solo es legitima
+    en la interseccion de dominios.
+
+[2] emparejamiento estacion-pixel (radio 35 km + maxima correlacion de anomalias)
+    anios comunes: 1981-2003 (23) | pixeles: 1443
+    estaciones emparejadas: 65 | pixeles distintos: 25
+    r de anomalias: mediana 0.526 [0.158, 0.674]
+    candidatos por estacion: mediana 67 | distancia al centroide: mediana 26.2 km
+    control: r con pixeles aleatorios = 0.274 +- 0.179 => el emparejamiento gana +0.245 de correlacion
+
+[3] comparacion funcional pareada estacion vs pixel
+    pares estacion-anio comparables: 1243
+    sesgo medio integrado (estacion - satelite): -0.497 (sqrt(mm)/dia)
+    sesgo maximo -0.221 el dia 20 | minimo -0.696 el dia 156
+    la diferencia es significativa al 95 % en 100 % del anio
+    RMSE funcional: medio 0.720 | max 0.867 el dia 179
+    correlacion entre fuentes dia a dia: mediana 0.373 [0.174, 0.538]
+    integral anual: estacion 1224 vs satelite 1834 (razon mediana 1.62)
+    control de escala: con el ajuste diario de la fase 1 la razon sat/est seria 3.32
+    => 51 % del desacuerdo original era artefacto de Jensen, no sesgo del producto satelital
+    maximos de la media: estacion dias [108, 308] | satelite dias [114, 302]
+
+    sesgo por subzona (estacion - satelite, sqrt(mm)/dia):
+      2610  n= 178  sesgo -0.328  razon sat/est 1.41  alt 952 m
+      2611  n= 198  sesgo -0.207  razon sat/est 1.18  alt 975 m
+      2612  n= 619  sesgo -0.627  razon sat/est 1.82  alt 1480 m
+      2613  n= 248  sesgo -0.528  razon sat/est 1.66  alt 1520 m
+    Spearman sesgo vs altitud de subzona: -0.308 | vs longitud: -0.363
+    Spearman sesgo vs anio: -0.457 (deriva temporal del producto satelital)
+
+[4] dataset pareado para la fase 4: entrega/pares_estacion_pixel.csv (1243 filas, 65 estaciones, 1981-2003)
+
+[fin] figuras fase3_*.png, tablas fase3_*.csv, dataset pares_estacion_pixel.csv
+
+##########################################################################
+# BLOQUE 6/6: Fase 4 - red funcional, ablacion y evaluacion
+##########################################################################
+==========================================================================
+FASE 4 - red funcional, ablacion de cabezas y evaluacion
+==========================================================================
+    Gram W por cuadratura: traza 1092.00 | max|W - W^T| = 5.68e-14
+    rugosidad R: traza 5.434e-04 (penaliza la curvatura de las w_k(t))
+
+[1] datos: 1243 pares estacion-anio | 65 estaciones | 1981-2003
+    estaciones reservadas por sorteo (no se usan para entrenar): 13 de 65
+    particion temporal: train 724 (1981-1996) | val 111 (1997-1999) | test 162 (2000-2003)
+    bloque reservado (generalizacion espacial): 246 pares, 13 estaciones, todos los anios
+
+[2] decodificador FPCA (solo train): varianza explicada PC1 42.7% PC2 30.3% PC3 10.6% PC4 9.9% PC5 6.5%
+    componentes retenidas para el 99 %: M = 5 (acumulado 100.00 %)
+    ortonormalidad en L2: max|B^T W B - I| = 1.89e-15
+    entrada al modelo: 8 variables (5 del codificador L2 + 3 covariables) -> salida 5 scores
+checkpoint directory created: ./model
+saving model version 0.0
+
+[3] presupuesto de parametros (sum(p.numel()))
+    KAN (pykan): 756 | MLP (h=54): 761 | lineal: 45
+    diferencia KAN vs MLP: 0.7 % (cumple <= 10 %)
+
+[4] verificaciones
+    cabeza lineal por gradiente vs regresion funcional cerrada (Cholesky propia):
+      max|dif| en los coeficientes = 1.47e-09 (CUMPLE <= 1e-4)
+checkpoint directory created: ./model
+saving model version 0.0
+    KAN sobre f(x1,x2)=sin(pi x1)+x2^2: RMSE 0.0026 (sd objetivo 0.764) -> aprende la funcion
+
+[5] entrenamiento y evaluacion (3 semillas por cabeza)
+/srv/mark02/analitica-final/proyecto_final_python.py:2621: RuntimeWarning: Mean of empty slice
+  err_pico = np.nanmean(np.abs(pp - po), axis=1)
+    lineal  semilla 20264: epocas  1160 | perdida val 0.23111
+    lineal  semilla 20265: epocas  1210 | perdida val 0.23111
+    lineal  semilla 20266: epocas  1230 | perdida val 0.23111
+    mlp     semilla 20264: epocas   340 | perdida val 0.23516
+    mlp     semilla 20265: epocas   540 | perdida val 0.23803
+    mlp     semilla 20266: epocas   340 | perdida val 0.23023
+checkpoint directory created: ./model
+saving model version 0.0
+    kan     semilla 20264: epocas   690 | perdida val 0.23062
+checkpoint directory created: ./model
+saving model version 0.0
+    kan     semilla 20265: epocas   700 | perdida val 0.22941
+checkpoint directory created: ./model
+saving model version 0.0
+    kan     semilla 20266: epocas   680 | perdida val 0.23057
+
+[6] resultados (media +- sd entre semillas)
+
+    bloque test_temporal
+      modelo                           L2 rel            KGE   sesgo acum %  err picos (d) recortado %
+      kan                       0.2746+-0.0009  0.3383+-0.0041    +2.3+-  0.3    23.0+-  0.0       0.15
+      lineal                    0.2754+-0.0001  0.1521+-0.0003    +2.8+-  0.0    22.3+-  0.0       0.00
+      mlp                       0.2830+-0.0099  0.1224+-0.0263    -0.1+-  4.6    26.4+-  6.7       0.01
+      satelital_sin_corregir    0.5045+-0.0000 -0.4192+-0.0000   +72.3+-  0.0    23.9+-  0.0       0.00
+
+    bloque reservadas
+      modelo                           L2 rel            KGE   sesgo acum %  err picos (d) recortado %
+      kan                       0.2318+-0.0008  0.1884+-0.0058   -11.6+-  0.1    17.2+-  0.0       0.11
+      lineal                    0.2161+-0.0000  0.2149+-0.0005    -7.6+-  0.0    16.8+-  0.0       0.00
+      mlp                       0.2095+-0.0016  0.3277+-0.1044    -8.8+-  1.7    16.8+-  0.9       0.00
+      satelital_sin_corregir    0.4028+-0.0000 -0.0631+-0.0000   +50.0+-  0.0    18.4+-  0.0       0.00
+
+[7] inferencia: bootstrap 1000 por estacion + Wilcoxon pareada
+    [test_temporal ] lineal  vs satelital_sin_corregir   dif L2 -0.2290 IC95 [-0.2559,-0.2000] SIGNIFICATIVO   p_est=7.07e-11
+    [test_temporal ] mlp     vs satelital_sin_corregir   dif L2 -0.2285 IC95 [-0.2570,-0.2028] SIGNIFICATIVO   p_est=3.38e-11
+    [test_temporal ] kan     vs satelital_sin_corregir   dif L2 -0.2289 IC95 [-0.2585,-0.2014] SIGNIFICATIVO   p_est=4.36e-12
+    [test_temporal ] mlp     vs lineal                   dif L2 +0.0006 IC95 [-0.0047,+0.0060] no concluyente  p_est=4.22e-01
+    [test_temporal ] kan     vs lineal                   dif L2 +0.0002 IC95 [-0.0121,+0.0111] no concluyente  p_est=6.04e-01
+    [test_temporal ] kan     vs mlp                      dif L2 -0.0004 IC95 [-0.0125,+0.0114] no concluyente  p_est=9.12e-01
+    [reservadas    ] lineal  vs satelital_sin_corregir   dif L2 -0.1867 IC95 [-0.2043,-0.1692] SIGNIFICATIVO   p_est=2.44e-04
+    [reservadas    ] mlp     vs satelital_sin_corregir   dif L2 -0.1951 IC95 [-0.2126,-0.1772] SIGNIFICATIVO   p_est=2.44e-04
+    [reservadas    ] kan     vs satelital_sin_corregir   dif L2 -0.1703 IC95 [-0.1917,-0.1498] SIGNIFICATIVO   p_est=4.88e-04
+    [reservadas    ] mlp     vs lineal                   dif L2 -0.0084 IC95 [-0.0119,-0.0051] SIGNIFICATIVO   p_est=2.44e-04
+    [reservadas    ] kan     vs lineal                   dif L2 +0.0164 IC95 [+0.0074,+0.0268] SIGNIFICATIVO   p_est=1.91e-01
+    [reservadas    ] kan     vs mlp                      dif L2 +0.0248 IC95 [+0.0151,+0.0343] SIGNIFICATIVO   p_est=5.74e-02
+
+[8] desglose por fase ENSO (ONI medio anual, NOAA/PSL Nino 3.4)
+    L2 relativo por fase (bloque test_temporal):
+      fase                    El Nino  La Nina  Neutro
+      modelo                                          
+      kan                      0.2996   0.2481  0.2798
+      lineal                   0.3089   0.2466  0.2758
+      mlp                      0.3321   0.2489  0.2645
+      satelital_sin_corregir   0.5792   0.3441  0.5599
+
+[9] predicciones de estaciones reservadas: entrega/pred_reservadas.csv
+    modelo usado: mlp (mejor L2 en el bloque reservado) | 89,790 filas | columnas ['station_id', 'year', 'day', 'value_mm']
+    rango de value_mm: 0.089 a 8.3 mm/dia (negativos: 0)
+
+[fin] figuras fase4_*.png | tablas fase4_*.csv | pred_reservadas.csv
+      torch 2.15.0+cpu | semillas [20264, 20265, 20266] | lambda_rug 1e-06
+
+[proyecto] bloques ejecutados: [1, 2, 3, 4, 5, 6]
+EXIT=0

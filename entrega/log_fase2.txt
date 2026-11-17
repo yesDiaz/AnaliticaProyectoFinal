@@ -1,0 +1,82 @@
+==============================================================================
+FASE 2 - ANALISIS EXPLORATORIO FUNCIONAL
+numpy 2.5.4 | pandas 3.1.1 | matplotlib 3.11.2
+skfda 0.10.1 (solo para VERIFICAR lo calculado a mano)
+==============================================================================
+
+[1] curvas estacion-anio: 3567 (186 estaciones, 1981-2003)
+    curvas pixel-anio:    46176 (1443 pixeles, 1981-2012)
+    las dos fuentes comparten base (Fourier K=5) y dominio t en [0,365]
+    acumulado observado medio 1938 mm/anio vs reconstruido 810 mm/anio (sesgo -1128 mm, -58.2 %; factor de escala 2.39)
+    -> el suavizado con K=5 elimina la varianza diaria de alta frecuencia; la curva
+       describe la FORMA estacional, no el total. Para totales se usa el observado.
+
+[2] media funcional
+    estaciones: max|manual - Phi(t)c_barra| = 6.217e-15
+    estaciones: max|manual - numpy.mean|    = 0.000e+00
+    estaciones: max|manual - skfda.mean|    = 0.000e+00
+    satelite:   max|manual - Phi(t)c_barra| = 4.574e-14
+
+[3] varianza, covarianza y correlacion funcional
+    traza de la covarianza (varianza total integrada): estaciones 184.55 | satelite 273.68  (escala sqrt mm)^2
+    desv. estandar funcional: estaciones min 0.606 (dia 77) max 0.785 (dia 316)
+    correlacion ene-abr (dia 15 vs 105): estaciones 0.736 | satelite 0.889
+    correlacion abr-oct (dia 105 vs 300): estaciones 0.775 | satelite 0.923
+
+[4] derivadas e inicio/fin de temporadas
+    estaciones: maximos en dias [111.4, 304.3] (['22-abr', '01-nov'])
+    estaciones: minimos en dias [27.3, 206.6] (['28-ene', '26-jul'])
+    satelite:   maximos en dias [126.2, 300.7] (['07-may', '28-oct'])
+    satelite:   minimos en dias [33.6, 210.0] (['03-feb', '30-jul'])
+    nivel medio anual: estaciones 1.273 | satelite 2.867 (sqrt mm/dia)
+    temporadas estaciones: inicios ['06-mar', '15-sep'] | finales ['03-jun', '22-dic']
+    temporadas satelite:   inicios ['26-mar', '04-sep'] | finales ['21-jun', '17-dic']
+
+[5] profundidad funcional y boxplot funcional
+    estaciones: FM  min 0.5003 max 0.9646 | MBD min 0.0012 max 0.4965
+    correlacion de Spearman FM vs MBD: 0.9893
+    verificacion contra skfda (n=400): max|MBD_manual - MBD_skfda| = 8.050e-05
+    verificacion contra skfda (n=400): max|FM_manual  - FM_skfda|  = 1.087e-04
+    atipicas (estaciones): 54 de 3567 curvas (1.51 %)
+    curva mediana (MBD maxima): estacion 2613600103 anio 2003
+    top 5 menos profundas (MBD):
+      estacion 5300900102 anio 1988  MBD=0.0012  acumulado observado=  20530 mm
+      estacion 5300900102 anio 1985  MBD=0.0017  acumulado observado=  19444 mm
+      estacion 5300900102 anio 1984  MBD=0.0020  acumulado observado=  23818 mm
+      estacion 5300900102 anio 1986  MBD=0.0034  acumulado observado=  19328 mm
+      estacion 5300900102 anio 1987  MBD=0.0037  acumulado observado=  15837 mm
+    atipicas por anio (top): {1993: 5, 1996: 5, 1988: 4, 1994: 4, 1998: 4, 2002: 4}
+    atipicas (satelite): 0 de 46176 (0.00 %)
+
+[6] variabilidad interanual y ENSO
+    serie Nino 3.4 cargada: 1948-2026
+    acumulado anual medio: 1939 mm (min 1556 en 1992, max 2398 en 1984)
+    correlacion de Spearman acumulado anual vs ONI DJF: -0.270 (n=23 anios)
+    correlacion de Spearman acumulado anual vs ONI medio anual: -0.403 (clasificacion mas pertinente para el anio civil de lluvia)
+    medias por fase ENSO segun ONI medio anual (mm/anio):
+      El Nino   n= 6     1812 mm  anios [1982, 1987, 1991, 1992, 1997, 2002]
+      La Nina   n= 6     2113 mm  anios [1984, 1985, 1988, 1989, 1999, 2000]
+      Neutro    n=11     1914 mm  anios [1981, 1983, 1986, 1990, 1993, 1994, 1995, 1996, 1998, 2001, 2003]
+
+[7] gradiente orografico (fuente satelital, 1.443 pixeles)
+    acumulado anual por pixel: min 1013 mm | mediana 3074 mm | max 6170 mm
+    media vertiente pacifica (lon <= -76.8): 5080 mm | valle interandino (-76.5 a -75.9): 1855 mm | razon 2.74
+    Spearman acumulado vs longitud: -0.813 (negativo = mas lluvia al occidente)
+
+[8] FPCA funcional (implementado a mano, verificado contra skfda)
+    varianza explicada: PC1 79.6%  PC2 10.0%  PC3 5.0%  PC4 3.4%  PC5 2.0%  (acumulada PC1-PC2 89.6%)
+    ortonormalidad: max|<xi_i,xi_j> - delta_ij| = 8.88e-16
+    varianza de los scores vs autovalores: max dif = 2.84e-14
+    skfda varianza explicada: PC1 79.6%  PC2 10.0%  PC3 5.0%
+    |corr(scores PC1 manual, skfda)| = 1.000000
+    |corr(scores PC2 manual, skfda)| = 1.000000
+    |corr(scores PC3 manual, skfda)| = 1.000000
+    Spearman PC1 vs acumulado observado: 0.921
+
+[9] validacion de la representacion funcional contra el dato observado
+    n=3567 curvas | RMSE 1234 mm | r Pearson 0.9730 | rho Spearman 0.9271 | sesgo -1128 mm
+    la correlacion alta con sesgo sistematico confirma que la curva preserva el
+    ordenamiento y la forma (lo que usan las fases 2-4) y no el total acumulado.
+
+[fin] figuras en entrega/figs/fase2_*.png, tablas en entrega/tablas/fase2_*.csv
+semilla 20262 | python 3.12.3

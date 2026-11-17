@@ -1,0 +1,57 @@
+========================================================================
+FASE 3 - Comparacion estaciones vs satelital  (semilla 20263)
+========================================================================
+
+[1] coordenada aproximada por subzona hidrografica
+    subzonas en los datos: 17 | con registros en el CNE: 13
+    incertidumbre mediana del centroide: 10 km en lon, 24 km en lat
+      2610  n_CNE= 429  ( -76.100,  4.267)  alt=   952 m  Valle Del Cauca  EN MALLA
+      2611  n_CNE= 210  ( -76.100,  4.533)  alt=   975 m  Valle Del Cauca  EN MALLA
+      2612  n_CNE= 513  ( -75.717,  4.556)  alt=  1480 m  Quindío          EN MALLA
+      2613  n_CNE= 398  ( -75.652,  4.850)  alt=  1520 m  Risaralda        EN MALLA
+      2614  n_CNE= 269  ( -75.865,  5.150)  alt=  1430 m  Risaralda        fuera
+      2615  n_CNE= 486  ( -75.500,  5.050)  alt=  2032 m  Caldas           fuera
+      2620  n_CNE= 216  ( -75.709,  6.055)  alt=  1575 m  Antioquia        fuera
+      2621  n_CNE=  80  ( -75.896,  6.350)  alt=  1739 m  Antioquia        fuera
+      2622  n_CNE=  51  ( -75.833,  6.729)  alt=  1500 m  Antioquia        fuera
+      2623  n_CNE= 117  ( -75.683,  6.880)  alt=  1100 m  Antioquia        fuera
+      2624  n_CNE=  78  ( -75.361,  7.692)  alt=    88 m  Antioquia        fuera
+      2625  n_CNE=  48  ( -75.346,  7.539)  alt=   148 m  Antioquia        fuera
+      5301  n_CNE=   6  ( -78.411,  2.519)  alt=   115 m  Nariño           fuera
+
+    [HALLAZGO] estaciones dentro del dominio satelital: 65 de 186 (35 %)
+    el resto pertenece al Cauca medio-bajo (Antioquia) y al Patia/Pacifico sur,
+    fuera de la malla del producto satelital: los dos conjuntos de datos del
+    proyecto NO cubren la misma region. La comparacion pareada solo es legitima
+    en la interseccion de dominios.
+
+[2] emparejamiento estacion-pixel (radio 35 km + maxima correlacion de anomalias)
+    anios comunes: 1981-2003 (23) | pixeles: 1443
+    estaciones emparejadas: 65 | pixeles distintos: 25
+    r de anomalias: mediana 0.526 [0.158, 0.674]
+    candidatos por estacion: mediana 67 | distancia al centroide: mediana 26.2 km
+    control: r con pixeles aleatorios = 0.274 +- 0.179 => el emparejamiento gana +0.245 de correlacion
+
+[3] comparacion funcional pareada estacion vs pixel
+    pares estacion-anio comparables: 1243
+    sesgo medio integrado (estacion - satelite): -0.497 (sqrt(mm)/dia)
+    sesgo maximo -0.221 el dia 20 | minimo -0.696 el dia 156
+    la diferencia es significativa al 95 % en 100 % del anio
+    RMSE funcional: medio 0.720 | max 0.867 el dia 179
+    correlacion entre fuentes dia a dia: mediana 0.373 [0.174, 0.538]
+    integral anual: estacion 1224 vs satelite 1834 (razon mediana 1.62)
+    control de escala: con el ajuste diario de la fase 1 la razon sat/est seria 3.32
+    => 51 % del desacuerdo original era artefacto de Jensen, no sesgo del producto satelital
+    maximos de la media: estacion dias [108, 308] | satelite dias [114, 302]
+
+    sesgo por subzona (estacion - satelite, sqrt(mm)/dia):
+      2610  n= 178  sesgo -0.328  razon sat/est 1.41  alt 952 m
+      2611  n= 198  sesgo -0.207  razon sat/est 1.18  alt 975 m
+      2612  n= 619  sesgo -0.627  razon sat/est 1.82  alt 1480 m
+      2613  n= 248  sesgo -0.528  razon sat/est 1.66  alt 1520 m
+    Spearman sesgo vs altitud de subzona: -0.308 | vs longitud: -0.363
+    Spearman sesgo vs anio: -0.457 (deriva temporal del producto satelital)
+
+[4] dataset pareado para la fase 4: entrega/pares_estacion_pixel.csv (1243 filas, 65 estaciones, 1981-2003)
+
+[fin] figuras fase3_*.png, tablas fase3_*.csv, dataset pares_estacion_pixel.csv

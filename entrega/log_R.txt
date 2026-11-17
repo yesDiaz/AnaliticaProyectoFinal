@@ -1,0 +1,43 @@
+====================================================================== 
+PROYECTO FINAL - bloque en R: datos funcionales y verificacion
+====================================================================== 
+
+[1] bases y algebra a mano
+    Fourier K=5: dim 365 x 5 | ortogonalidad max|off-diag(Phi^T Phi)/T| = 1.72e-16
+    B-spline cubica (8 nodos): dim 365 x 11 | suma de filas = 1.000000 (debe ser 1)
+    Cholesky propia: max|L L^T - A| = 2.84e-14
+
+[2] datos
+    registros diarios: 1,299,927 | estaciones: 186 | anios: 1981-2003
+
+[3] seleccion de K y lambda por GCV (muestra de 40 curvas estacion-anio)
+    tabla GCV (media sobre la muestra):
+  K    gcv.0  gcv.100 gcv.10000 gcv.1e+05 gcv.1e+06
+  3 3.197211 3.197211  3.197180  3.196910  3.194876
+  5 3.122128 3.122122  3.121638  3.119240  3.137206
+  7 3.121827 3.121798  3.119176  3.110559  3.133457
+  9 3.126035 3.125926  3.117977  3.105347  3.132425
+ 11 3.121153 3.120852  3.105681  3.099489  3.131670
+    optimo por GCV: K = 11, lambda = 100000 (GCV 3.09949)
+    nota: el proyecto fija K=5 para que las dos fuentes compartan base;
+          con K mas alto el GCV baja pero se reintroduce ruido diario.
+
+[4] ajuste K=5, matriz de suavizado y bandas punto a punto
+    curvas ajustadas en R: 3567 (estaciones 186)
+    ejemplo 2610000102 1981 (n=365 dias): tr(S) = 4.736 (gl efectivos, deberia ~ K=5)
+    S simetrica: max|S - S^T| = 5.20e-18 | proyeccion (lambda=100000): max|S^2 - S| = 6.39e-04
+    con lambda = 100000, S no es idempotente (suaviza): gl efectivos 4.736 < K = 5
+    banda punto a punto: ancho medio del IC 95% = 0.8035 sqrt(mm)
+
+[5] verificacion cruzada R vs Python
+    curvas comunes: 3567
+    max|coef_R - coef_py| por componente: c1 3.32e-06  c2 5.71e-06  c3 2.15e-05  c4 3.02e-06  c5 7.65e-05
+    max|curva_R - curva_py| = 9.81e-05 | RMSE entre implementaciones = 1.32e-05
+    => las dos implementaciones coinciden (residuo del orden de la cuadratura
+       usada para la matriz de rugosidad; tr(S) identico: 4.736)
+null device 
+          1 
+
+[fin] salidas en entrega/tablas/R_*.csv y entrega/figs/R_ajuste_funcional.png
+      R version 4.3.3 (2024-02-29)
+EXIT=0

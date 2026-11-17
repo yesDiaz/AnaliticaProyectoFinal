@@ -1,0 +1,81 @@
+==========================================================================
+FASE 4 - red funcional, ablacion de cabezas y evaluacion
+==========================================================================
+    Gram W por cuadratura: traza 1092.00 | max|W - W^T| = 5.68e-14
+    rugosidad R: traza 5.434e-04 (penaliza la curvatura de las w_k(t))
+
+[1] datos: 2324 pares estacion-anio | 121 estaciones | 1981-2003
+    estaciones reservadas por sorteo (no se usan para entrenar): 24 de 121
+    particion temporal: train 1256 (1981-1995) | val 367 (1996-2000) | test 241 (2001-2003)
+    bloque reservado (generalizacion espacial): 460 pares, 24 estaciones, todos los anios
+
+[2] decodificador FPCA (solo train): varianza explicada PC1 61.3% PC2 16.9% PC3 10.1% PC4 6.7% PC5 5.0%
+    componentes retenidas para el 99 %: M = 5 (acumulado 100.00 %)
+    ortonormalidad en L2: max|B^T W B - I| = 1.22e-15
+    entrada al modelo: 8 variables (5 del codificador L2 + 3 covariables) -> salida 5 scores
+
+[3] presupuesto de parametros (sum(p.numel()))
+    KAN (pykan): 756 | MLP (h=54): 761 | lineal: 45
+    diferencia KAN vs MLP: 0.7 % (cumple <= 10 %)
+
+[4] verificaciones
+    cabeza lineal por gradiente vs regresion funcional cerrada (Cholesky propia):
+      max|dif| en los coeficientes = 1.58e-09 (CUMPLE <= 1e-4)
+    KAN sobre f(x1,x2)=sin(pi x1)+x2^2: RMSE 0.0026 (sd objetivo 0.764) -> aprende la funcion
+
+[5] entrenamiento y evaluacion (3 semillas por cabeza)
+    lineal  semilla 20264: epocas  2970 | perdida val 0.25667
+    lineal  semilla 20265: epocas  2999 | perdida val 0.25667
+    lineal  semilla 20266: epocas  2999 | perdida val 0.25667
+    mlp     semilla 20264: epocas   410 | perdida val 0.21194
+    mlp     semilla 20265: epocas   430 | perdida val 0.20959
+    mlp     semilla 20266: epocas   450 | perdida val 0.19882
+    kan     semilla 20264: epocas  2999 | perdida val 0.19637
+    kan     semilla 20265: epocas  2999 | perdida val 0.19630
+    kan     semilla 20266: epocas  2999 | perdida val 0.19641
+
+[6] resultados (media +- sd entre semillas)
+
+    bloque test_temporal
+      modelo                           L2 rel            KGE   sesgo acum %  err picos (d) recortado %
+      kan                       0.2405+-0.0003  0.6178+-0.0009    +6.1+-  0.1    10.4+-  0.0       0.03
+      lineal                    0.2495+-0.0000  0.2725+-0.0000    +0.9+-  0.0    10.7+-  0.0       0.03
+      mlp                       0.2420+-0.0009  0.5679+-0.0118    +5.4+-  0.5    10.6+-  0.0       0.00
+      satelital_sin_corregir    0.4293+-0.0000  0.1782+-0.0000   +62.0+-  0.0     8.6+-  0.0       0.00
+
+    bloque reservadas
+      modelo                           L2 rel            KGE   sesgo acum %  err picos (d) recortado %
+      kan                       0.2339+-0.0002  0.7923+-0.0101    -5.9+-  0.3    17.4+-  0.0       0.02
+      lineal                    0.2492+-0.0000  0.4189+-0.0000    -6.5+-  0.0    17.8+-  0.0       0.00
+      mlp                       0.2348+-0.0007  0.3023+-0.0811    +9.6+-  1.5    17.7+-  0.3       0.00
+      satelital_sin_corregir    0.3876+-0.0000  0.3820+-0.0000   +32.9+-  0.0    18.6+-  0.0       0.00
+
+[7] inferencia: bootstrap 1000 por estacion + Wilcoxon pareada
+    [test_temporal ] lineal  vs satelital_sin_corregir   dif L2 -0.1798 IC95 [-0.1990,-0.1576] SIGNIFICATIVO   p_est=2.17e-13
+    [test_temporal ] mlp     vs satelital_sin_corregir   dif L2 -0.1862 IC95 [-0.2084,-0.1620] SIGNIFICATIVO   p_est=1.81e-13
+    [test_temporal ] kan     vs satelital_sin_corregir   dif L2 -0.1885 IC95 [-0.2129,-0.1634] SIGNIFICATIVO   p_est=8.62e-14
+    [test_temporal ] mlp     vs lineal                   dif L2 -0.0064 IC95 [-0.0191,+0.0066] no concluyente  p_est=3.71e-01
+    [test_temporal ] kan     vs lineal                   dif L2 -0.0087 IC95 [-0.0201,+0.0029] no concluyente  p_est=5.38e-01
+    [test_temporal ] kan     vs mlp                      dif L2 -0.0023 IC95 [-0.0123,+0.0068] no concluyente  p_est=8.11e-01
+    [reservadas    ] lineal  vs satelital_sin_corregir   dif L2 -0.1384 IC95 [-0.1541,-0.1237] SIGNIFICATIVO   p_est=3.02e-05
+    [reservadas    ] mlp     vs satelital_sin_corregir   dif L2 -0.1524 IC95 [-0.1733,-0.1318] SIGNIFICATIVO   p_est=2.39e-04
+    [reservadas    ] kan     vs satelital_sin_corregir   dif L2 -0.1538 IC95 [-0.1742,-0.1338] SIGNIFICATIVO   p_est=2.78e-04
+    [reservadas    ] mlp     vs lineal                   dif L2 -0.0140 IC95 [-0.0246,-0.0032] SIGNIFICATIVO   p_est=3.60e-01
+    [reservadas    ] kan     vs lineal                   dif L2 -0.0155 IC95 [-0.0260,-0.0048] SIGNIFICATIVO   p_est=7.05e-01
+    [reservadas    ] kan     vs mlp                      dif L2 -0.0014 IC95 [-0.0093,+0.0062] no concluyente  p_est=9.44e-01
+
+[8] desglose por fase ENSO (ONI medio anual, NOAA/PSL Nino 3.4)
+    L2 relativo por fase (bloque test_temporal):
+      fase                    El Nino  Neutro
+      modelo                                 
+      kan                      0.2411  0.2407
+      lineal                   0.2612  0.2438
+      mlp                      0.2614  0.2342
+      satelital_sin_corregir   0.4601  0.4143
+
+[9] predicciones de estaciones reservadas: entrega/pred_reservadas.csv
+    modelo usado: kan (mejor L2 en el bloque reservado) | 167,900 filas | columnas ['station_id', 'year', 'day', 'value_mm']
+    rango de value_mm: 0.000 a 42.7 mm/dia (negativos: 0)
+
+[fin] figuras fase4_*.png | tablas fase4_*.csv | pred_reservadas.csv
+      torch 2.15.0+cpu | semillas [20264, 20265, 20266] | lambda_rug 1e-06

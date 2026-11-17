@@ -1,0 +1,187 @@
+STATION_ID,CNE8,NOMBRE,CATEGORIA,DEPARTAMENTO,MUNICIPIO,ALTITUD,LON,LAT,ZONA_HIDRO,SUBZONA
+2610000102,26100100,TESORITO  [26100100],Pluviométrica,Valle Del Cauca,Zarzal,956.0,-76.06666667,4.366666667,Cauca,Rios Las Cañas - Los Micos y Obando
+2610000103,26100100,TESORITO  [26100100],Pluviométrica,Valle Del Cauca,Zarzal,956.0,-76.06666667,4.366666667,Cauca,Rios Las Cañas - Los Micos y Obando
+2610000104,26100100,TESORITO  [26100100],Pluviométrica,Valle Del Cauca,Zarzal,956.0,-76.06666667,4.366666667,Cauca,Rios Las Cañas - Los Micos y Obando
+2610000105,26100100,TESORITO  [26100100],Pluviométrica,Valle Del Cauca,Zarzal,956.0,-76.06666667,4.366666667,Cauca,Rios Las Cañas - Los Micos y Obando
+2610000111,26100110,LUISA LA  [26100110],Pluviométrica,Valle Del Cauca,Zarzal,930.0,-76.11666667,4.35,Cauca,Río Paila
+2610000113,26100110,LUISA LA  [26100110],Pluviométrica,Valle Del Cauca,Zarzal,930.0,-76.11666667,4.35,Cauca,Río Paila
+2610000202,26100200,PLACER EL  [26100200],Pluviométrica,Valle Del Cauca,Zarzal,935.0,-76.08333333,4.4,Cauca,Rios Las Cañas - Los Micos y Obando
+2610300103,26100100,TESORITO  [26100100],Pluviométrica,Valle Del Cauca,Zarzal,956.0,-76.06666667,4.366666667,Cauca,Rios Las Cañas - Los Micos y Obando
+2610400101,26100100,TESORITO  [26100100],Pluviométrica,Valle Del Cauca,Zarzal,956.0,-76.06666667,4.366666667,Cauca,Rios Las Cañas - Los Micos y Obando
+2611000101,26110100,,,,,,,,,
+2611000102,26110100,,,,,,,,,
+2611200101,26110100,,,,,,,,,
+2611400101,26110100,,,,,,,,,
+2611400102,26110100,,,,,,,,,
+2611600101,26110100,,,,,,,,,
+2611700102,26110100,,,,,,,,,
+2611700103,26110100,,,,,,,,,
+2611700301,26110300,CEROS [26110300],Pluviométrica,Valle Del Cauca,Toro,940.0,-76.03444444,4.616388889,Cauca,Rios Pescador - RUT - Chanco - Catarina y Cañaveral
+2611800201,26110200,GRANARIO EL  [26110200],Pluviométrica,Valle Del Cauca,El Águila,1813.0,-76.05,4.883333333,Cauca,Rios Pescador - RUT - Chanco - Catarina y Cañaveral
+2612000103,26120100,BREMEN  [26120100],Pluviográfica,Quindío,Circasia,2040.0,-75.61666667,4.666666667,Cauca,Río La Vieja
+2612000105,26120100,BREMEN  [26120100],Pluviográfica,Quindío,Circasia,2040.0,-75.61666667,4.666666667,Cauca,Río La Vieja
+2612000106,26120100,BREMEN  [26120100],Pluviográfica,Quindío,Circasia,2040.0,-75.61666667,4.666666667,Cauca,Río La Vieja
+2612000107,26120100,BREMEN  [26120100],Pluviográfica,Quindío,Circasia,2040.0,-75.61666667,4.666666667,Cauca,Río La Vieja
+2612000108,26120100,BREMEN  [26120100],Pluviográfica,Quindío,Circasia,2040.0,-75.61666667,4.666666667,Cauca,Río La Vieja
+2612000109,26120100,BREMEN  [26120100],Pluviográfica,Quindío,Circasia,2040.0,-75.61666667,4.666666667,Cauca,Río La Vieja
+2612000111,26120110,PUEBLO TAPADO  [26120110],Pluviométrica,Quindío,Montenegro,1250.0,-75.78333333,4.566666667,Cauca,Río La Vieja
+2612000112,26120110,PUEBLO TAPADO  [26120110],Pluviométrica,Quindío,Montenegro,1250.0,-75.78333333,4.566666667,Cauca,Río La Vieja
+2612000201,26120200,AMAZONAS  [26120200],Pluviométrica,Quindío,Filandia,1700.0,-75.65,4.633333333,Cauca,Río La Vieja
+2612200103,26120100,BREMEN  [26120100],Pluviográfica,Quindío,Circasia,2040.0,-75.61666667,4.666666667,Cauca,Río La Vieja
+2612200104,26120100,BREMEN  [26120100],Pluviográfica,Quindío,Circasia,2040.0,-75.61666667,4.666666667,Cauca,Río La Vieja
+2612200105,26120100,BREMEN  [26120100],Pluviográfica,Quindío,Circasia,2040.0,-75.61666667,4.666666667,Cauca,Río La Vieja
+2612200202,26120200,AMAZONAS  [26120200],Pluviométrica,Quindío,Filandia,1700.0,-75.65,4.633333333,Cauca,Río La Vieja
+2612700105,26120100,BREMEN  [26120100],Pluviográfica,Quindío,Circasia,2040.0,-75.61666667,4.666666667,Cauca,Río La Vieja
+2612700201,26120200,AMAZONAS  [26120200],Pluviométrica,Quindío,Filandia,1700.0,-75.65,4.633333333,Cauca,Río La Vieja
+2612700203,26120200,AMAZONAS  [26120200],Pluviométrica,Quindío,Filandia,1700.0,-75.65,4.633333333,Cauca,Río La Vieja
+2612710101,26120100,BREMEN  [26120100],Pluviográfica,Quindío,Circasia,2040.0,-75.61666667,4.666666667,Cauca,Río La Vieja
+2612710105,26120100,BREMEN  [26120100],Pluviográfica,Quindío,Circasia,2040.0,-75.61666667,4.666666667,Cauca,Río La Vieja
+2612710202,26120200,AMAZONAS  [26120200],Pluviométrica,Quindío,Filandia,1700.0,-75.65,4.633333333,Cauca,Río La Vieja
+2612710301,26120300,NAVARCO  [26120300],Pluviométrica,Quindío,Salento,2278.0,-75.55,4.483333333,Cauca,Río La Vieja
+2612720101,26120100,BREMEN  [26120100],Pluviográfica,Quindío,Circasia,2040.0,-75.61666667,4.666666667,Cauca,Río La Vieja
+2612720103,26120100,BREMEN  [26120100],Pluviográfica,Quindío,Circasia,2040.0,-75.61666667,4.666666667,Cauca,Río La Vieja
+2612720301,26120300,NAVARCO  [26120300],Pluviométrica,Quindío,Salento,2278.0,-75.55,4.483333333,Cauca,Río La Vieja
+2612800103,26120100,BREMEN  [26120100],Pluviográfica,Quindío,Circasia,2040.0,-75.61666667,4.666666667,Cauca,Río La Vieja
+2612800202,26120200,AMAZONAS  [26120200],Pluviométrica,Quindío,Filandia,1700.0,-75.65,4.633333333,Cauca,Río La Vieja
+2612810102,26120100,BREMEN  [26120100],Pluviográfica,Quindío,Circasia,2040.0,-75.61666667,4.666666667,Cauca,Río La Vieja
+2612810108,26120100,BREMEN  [26120100],Pluviográfica,Quindío,Circasia,2040.0,-75.61666667,4.666666667,Cauca,Río La Vieja
+2612810109,26120100,BREMEN  [26120100],Pluviográfica,Quindío,Circasia,2040.0,-75.61666667,4.666666667,Cauca,Río La Vieja
+2612810112,26120110,PUEBLO TAPADO  [26120110],Pluviométrica,Quindío,Montenegro,1250.0,-75.78333333,4.566666667,Cauca,Río La Vieja
+2612810118,26120110,PUEBLO TAPADO  [26120110],Pluviométrica,Quindío,Montenegro,1250.0,-75.78333333,4.566666667,Cauca,Río La Vieja
+2612810122,26120120,CAMELIA LA [26120120],Pluviométrica,Valle Del Cauca,Caicedonia,1240.0,-75.834833333,4.331555556,Cauca,Río La Vieja
+2612810201,26120200,AMAZONAS  [26120200],Pluviométrica,Quindío,Filandia,1700.0,-75.65,4.633333333,Cauca,Río La Vieja
+2612810203,26120200,AMAZONAS  [26120200],Pluviométrica,Quindío,Filandia,1700.0,-75.65,4.633333333,Cauca,Río La Vieja
+2613000102,26130100,BANANERA LA  [26130100],Pluviométrica,Risaralda,Pereira,1200.0,-75.68333333,4.816666667,Cauca,Río Otún y otros directos al Cauca
+2613000103,26130100,BANANERA LA  [26130100],Pluviométrica,Risaralda,Pereira,1200.0,-75.68333333,4.816666667,Cauca,Río Otún y otros directos al Cauca
+2613100103,26130100,BANANERA LA  [26130100],Pluviométrica,Risaralda,Pereira,1200.0,-75.68333333,4.816666667,Cauca,Río Otún y otros directos al Cauca
+2613100104,26130100,BANANERA LA  [26130100],Pluviométrica,Risaralda,Pereira,1200.0,-75.68333333,4.816666667,Cauca,Río Otún y otros directos al Cauca
+2613100106,26130100,BANANERA LA  [26130100],Pluviométrica,Risaralda,Pereira,1200.0,-75.68333333,4.816666667,Cauca,Río Otún y otros directos al Cauca
+2613100107,26130100,BANANERA LA  [26130100],Pluviométrica,Risaralda,Pereira,1200.0,-75.68333333,4.816666667,Cauca,Río Otún y otros directos al Cauca
+2613200105,26130100,BANANERA LA  [26130100],Pluviométrica,Risaralda,Pereira,1200.0,-75.68333333,4.816666667,Cauca,Río Otún y otros directos al Cauca
+2613600101,26130100,BANANERA LA  [26130100],Pluviométrica,Risaralda,Pereira,1200.0,-75.68333333,4.816666667,Cauca,Río Otún y otros directos al Cauca
+2613600102,26130100,BANANERA LA  [26130100],Pluviométrica,Risaralda,Pereira,1200.0,-75.68333333,4.816666667,Cauca,Río Otún y otros directos al Cauca
+2613600103,26130100,BANANERA LA  [26130100],Pluviométrica,Risaralda,Pereira,1200.0,-75.68333333,4.816666667,Cauca,Río Otún y otros directos al Cauca
+2613600105,26130100,BANANERA LA  [26130100],Pluviométrica,Risaralda,Pereira,1200.0,-75.68333333,4.816666667,Cauca,Río Otún y otros directos al Cauca
+2613600301,26130300,ESMERALDA LA  [26130300],Pluviométrica,Caldas,Chinchina,1040.0,-75.71666667,5.066666667,Cauca,Río Otún y otros directos al Cauca
+2613800101,26130100,BANANERA LA  [26130100],Pluviométrica,Risaralda,Pereira,1200.0,-75.68333333,4.816666667,Cauca,Río Otún y otros directos al Cauca
+2614100102,26140100,LIBANO  [26140100],Pluviométrica,Risaralda,La Celia,1500.0,-75.96666667,5.0,Cauca,Río Risaralda
+2614100103,26140100,LIBANO  [26140100],Pluviométrica,Risaralda,La Celia,1500.0,-75.96666667,5.0,Cauca,Río Risaralda
+2614100104,26140100,LIBANO  [26140100],Pluviométrica,Risaralda,La Celia,1500.0,-75.96666667,5.0,Cauca,Río Risaralda
+2614100202,26140200,TRIBUNA LA  [26140200],Pluviométrica,Risaralda,Balboa,1500.0,-75.96666667,4.95,Cauca,Rios Pescador - RUT - Chanco - Catarina y Cañaveral
+2614100203,26140200,TRIBUNA LA  [26140200],Pluviométrica,Risaralda,Balboa,1500.0,-75.96666667,4.95,Cauca,Rios Pescador - RUT - Chanco - Catarina y Cañaveral
+2614200101,26140100,LIBANO  [26140100],Pluviométrica,Risaralda,La Celia,1500.0,-75.96666667,5.0,Cauca,Río Risaralda
+2614400101,26140100,LIBANO  [26140100],Pluviométrica,Risaralda,La Celia,1500.0,-75.96666667,5.0,Cauca,Río Risaralda
+2614400102,26140100,LIBANO  [26140100],Pluviométrica,Risaralda,La Celia,1500.0,-75.96666667,5.0,Cauca,Río Risaralda
+2614400103,26140100,LIBANO  [26140100],Pluviométrica,Risaralda,La Celia,1500.0,-75.96666667,5.0,Cauca,Río Risaralda
+2614400104,26140100,LIBANO  [26140100],Pluviométrica,Risaralda,La Celia,1500.0,-75.96666667,5.0,Cauca,Río Risaralda
+2614400105,26140100,LIBANO  [26140100],Pluviométrica,Risaralda,La Celia,1500.0,-75.96666667,5.0,Cauca,Río Risaralda
+2614400201,26140200,TRIBUNA LA  [26140200],Pluviométrica,Risaralda,Balboa,1500.0,-75.96666667,4.95,Cauca,Rios Pescador - RUT - Chanco - Catarina y Cañaveral
+2614500102,26140100,LIBANO  [26140100],Pluviométrica,Risaralda,La Celia,1500.0,-75.96666667,5.0,Cauca,Río Risaralda
+2614500104,26140100,LIBANO  [26140100],Pluviométrica,Risaralda,La Celia,1500.0,-75.96666667,5.0,Cauca,Río Risaralda
+2614500201,26140200,TRIBUNA LA  [26140200],Pluviométrica,Risaralda,Balboa,1500.0,-75.96666667,4.95,Cauca,Rios Pescador - RUT - Chanco - Catarina y Cañaveral
+2614900101,26140100,LIBANO  [26140100],Pluviométrica,Risaralda,La Celia,1500.0,-75.96666667,5.0,Cauca,Río Risaralda
+2614900102,26140100,LIBANO  [26140100],Pluviométrica,Risaralda,La Celia,1500.0,-75.96666667,5.0,Cauca,Río Risaralda
+2614900201,26140200,TRIBUNA LA  [26140200],Pluviométrica,Risaralda,Balboa,1500.0,-75.96666667,4.95,Cauca,Rios Pescador - RUT - Chanco - Catarina y Cañaveral
+2615000101,26150100,TALLERES LA NUBIA  [26150100],Pluviométrica,Caldas,Manizales,2500.0,-75.43333333,5.066666667,Cauca,Río Chinchiná
+2615000102,26150100,TALLERES LA NUBIA  [26150100],Pluviométrica,Caldas,Manizales,2500.0,-75.43333333,5.066666667,Cauca,Río Chinchiná
+2615400103,26150100,TALLERES LA NUBIA  [26150100],Pluviométrica,Caldas,Manizales,2500.0,-75.43333333,5.066666667,Cauca,Río Chinchiná
+2615400104,26150100,TALLERES LA NUBIA  [26150100],Pluviométrica,Caldas,Manizales,2500.0,-75.43333333,5.066666667,Cauca,Río Chinchiná
+2615400105,26150100,TALLERES LA NUBIA  [26150100],Pluviométrica,Caldas,Manizales,2500.0,-75.43333333,5.066666667,Cauca,Río Chinchiná
+2615400106,26150100,TALLERES LA NUBIA  [26150100],Pluviométrica,Caldas,Manizales,2500.0,-75.43333333,5.066666667,Cauca,Río Chinchiná
+2615400107,26150100,TALLERES LA NUBIA  [26150100],Pluviométrica,Caldas,Manizales,2500.0,-75.43333333,5.066666667,Cauca,Río Chinchiná
+2615400110,26150110,ARABIA LA  [26150110],Pluviométrica,Caldas,Manizales,1000.0,-75.63333333,5.066666667,Cauca,Río Chinchiná
+2615400111,26150110,ARABIA LA  [26150110],Pluviométrica,Caldas,Manizales,1000.0,-75.63333333,5.066666667,Cauca,Río Chinchiná
+2615400202,26150200,SELVA LA  [26150200],Pluviométrica,Caldas,Manizales,1350.0,-75.6,5.116666667,Cauca,Rio Tapias y otros directos al Cauca
+2620000101,26200100,GUALANDAY HDA  [26200100],Pluviométrica,Antioquia,Fredonia,1420.0,-75.66666667,5.966666667,Cauca,Directos Río Cauca  entre Río San Juan y  Pto Valdivia
+2620000102,26200100,GUALANDAY HDA  [26200100],Pluviométrica,Antioquia,Fredonia,1420.0,-75.66666667,5.966666667,Cauca,Directos Río Cauca  entre Río San Juan y  Pto Valdivia
+2620000103,26200100,GUALANDAY HDA  [26200100],Pluviométrica,Antioquia,Fredonia,1420.0,-75.66666667,5.966666667,Cauca,Directos Río Cauca  entre Río San Juan y  Pto Valdivia
+2620000105,26200100,GUALANDAY HDA  [26200100],Pluviométrica,Antioquia,Fredonia,1420.0,-75.66666667,5.966666667,Cauca,Directos Río Cauca  entre Río San Juan y  Pto Valdivia
+2620000106,26200100,GUALANDAY HDA  [26200100],Pluviométrica,Antioquia,Fredonia,1420.0,-75.66666667,5.966666667,Cauca,Directos Río Cauca  entre Río San Juan y  Pto Valdivia
+2620000107,26200100,GUALANDAY HDA  [26200100],Pluviométrica,Antioquia,Fredonia,1420.0,-75.66666667,5.966666667,Cauca,Directos Río Cauca  entre Río San Juan y  Pto Valdivia
+2620000109,26200100,GUALANDAY HDA  [26200100],Pluviométrica,Antioquia,Fredonia,1420.0,-75.66666667,5.966666667,Cauca,Directos Río Cauca  entre Río San Juan y  Pto Valdivia
+2620000202,26200200,,,,,,,,,
+2620000203,26200200,,,,,,,,,
+2620000301,26200300,,,,,,,,,
+2620500201,26200200,,,,,,,,,
+2620610102,26200100,GUALANDAY HDA  [26200100],Pluviométrica,Antioquia,Fredonia,1420.0,-75.66666667,5.966666667,Cauca,Directos Río Cauca  entre Río San Juan y  Pto Valdivia
+2620610103,26200100,GUALANDAY HDA  [26200100],Pluviométrica,Antioquia,Fredonia,1420.0,-75.66666667,5.966666667,Cauca,Directos Río Cauca  entre Río San Juan y  Pto Valdivia
+2620900101,26200100,GUALANDAY HDA  [26200100],Pluviométrica,Antioquia,Fredonia,1420.0,-75.66666667,5.966666667,Cauca,Directos Río Cauca  entre Río San Juan y  Pto Valdivia
+2621500101,26210100,,,,,,,,,
+2621500103,26210100,,,,,,,,,
+2621500301,26210300,,,,,,,,,
+2622100102,26220100,LA GRANJA [26220100],Pluviométrica,Antioquia,Ituango,1028.0,-75.73408333,7.249638889,Cauca,Directos Río Cauca entre Río San Juan y Pto Valdia
+2622100103,26220100,LA GRANJA [26220100],Pluviométrica,Antioquia,Ituango,1028.0,-75.73408333,7.249638889,Cauca,Directos Río Cauca entre Río San Juan y Pto Valdia
+2622100301,26220300,,,,,,,,,
+2622110101,26220100,LA GRANJA [26220100],Pluviométrica,Antioquia,Ituango,1028.0,-75.73408333,7.249638889,Cauca,Directos Río Cauca entre Río San Juan y Pto Valdia
+2622110201,26220200,,,,,,,,,
+2622310101,26220100,LA GRANJA [26220100],Pluviométrica,Antioquia,Ituango,1028.0,-75.73408333,7.249638889,Cauca,Directos Río Cauca entre Río San Juan y Pto Valdia
+2622320101,26220100,LA GRANJA [26220100],Pluviométrica,Antioquia,Ituango,1028.0,-75.73408333,7.249638889,Cauca,Directos Río Cauca entre Río San Juan y Pto Valdia
+2622320103,26220100,LA GRANJA [26220100],Pluviométrica,Antioquia,Ituango,1028.0,-75.73408333,7.249638889,Cauca,Directos Río Cauca entre Río San Juan y Pto Valdia
+2622320201,26220200,,,,,,,,,
+2622330101,26220100,LA GRANJA [26220100],Pluviométrica,Antioquia,Ituango,1028.0,-75.73408333,7.249638889,Cauca,Directos Río Cauca entre Río San Juan y Pto Valdia
+2622330102,26220100,LA GRANJA [26220100],Pluviométrica,Antioquia,Ituango,1028.0,-75.73408333,7.249638889,Cauca,Directos Río Cauca entre Río San Juan y Pto Valdia
+2622330105,26220100,LA GRANJA [26220100],Pluviométrica,Antioquia,Ituango,1028.0,-75.73408333,7.249638889,Cauca,Directos Río Cauca entre Río San Juan y Pto Valdia
+2622330106,26220100,LA GRANJA [26220100],Pluviométrica,Antioquia,Ituango,1028.0,-75.73408333,7.249638889,Cauca,Directos Río Cauca entre Río San Juan y Pto Valdia
+2622330107,26220100,LA GRANJA [26220100],Pluviométrica,Antioquia,Ituango,1028.0,-75.73408333,7.249638889,Cauca,Directos Río Cauca entre Río San Juan y Pto Valdia
+2622400101,26220100,LA GRANJA [26220100],Pluviométrica,Antioquia,Ituango,1028.0,-75.73408333,7.249638889,Cauca,Directos Río Cauca entre Río San Juan y Pto Valdia
+2622400103,26220100,LA GRANJA [26220100],Pluviométrica,Antioquia,Ituango,1028.0,-75.73408333,7.249638889,Cauca,Directos Río Cauca entre Río San Juan y Pto Valdia
+2622400104,26220100,LA GRANJA [26220100],Pluviométrica,Antioquia,Ituango,1028.0,-75.73408333,7.249638889,Cauca,Directos Río Cauca entre Río San Juan y Pto Valdia
+2622400201,26220200,,,,,,,,,
+2622410102,26220100,LA GRANJA [26220100],Pluviométrica,Antioquia,Ituango,1028.0,-75.73408333,7.249638889,Cauca,Directos Río Cauca entre Río San Juan y Pto Valdia
+2622410104,26220100,LA GRANJA [26220100],Pluviométrica,Antioquia,Ituango,1028.0,-75.73408333,7.249638889,Cauca,Directos Río Cauca entre Río San Juan y Pto Valdia
+2622420101,26220100,LA GRANJA [26220100],Pluviométrica,Antioquia,Ituango,1028.0,-75.73408333,7.249638889,Cauca,Directos Río Cauca entre Río San Juan y Pto Valdia
+2622420102,26220100,LA GRANJA [26220100],Pluviométrica,Antioquia,Ituango,1028.0,-75.73408333,7.249638889,Cauca,Directos Río Cauca entre Río San Juan y Pto Valdia
+2622420103,26220100,LA GRANJA [26220100],Pluviométrica,Antioquia,Ituango,1028.0,-75.73408333,7.249638889,Cauca,Directos Río Cauca entre Río San Juan y Pto Valdia
+2622420104,26220100,LA GRANJA [26220100],Pluviométrica,Antioquia,Ituango,1028.0,-75.73408333,7.249638889,Cauca,Directos Río Cauca entre Río San Juan y Pto Valdia
+2622500101,26220100,LA GRANJA [26220100],Pluviométrica,Antioquia,Ituango,1028.0,-75.73408333,7.249638889,Cauca,Directos Río Cauca entre Río San Juan y Pto Valdia
+2622500102,26220100,LA GRANJA [26220100],Pluviométrica,Antioquia,Ituango,1028.0,-75.73408333,7.249638889,Cauca,Directos Río Cauca entre Río San Juan y Pto Valdia
+2622600101,26220100,LA GRANJA [26220100],Pluviométrica,Antioquia,Ituango,1028.0,-75.73408333,7.249638889,Cauca,Directos Río Cauca entre Río San Juan y Pto Valdia
+2622600103,26220100,LA GRANJA [26220100],Pluviométrica,Antioquia,Ituango,1028.0,-75.73408333,7.249638889,Cauca,Directos Río Cauca entre Río San Juan y Pto Valdia
+2622600201,26220200,,,,,,,,,
+2622900101,26220100,LA GRANJA [26220100],Pluviométrica,Antioquia,Ituango,1028.0,-75.73408333,7.249638889,Cauca,Directos Río Cauca entre Río San Juan y Pto Valdia
+2622900102,26220100,LA GRANJA [26220100],Pluviométrica,Antioquia,Ituango,1028.0,-75.73408333,7.249638889,Cauca,Directos Río Cauca entre Río San Juan y Pto Valdia
+2622900301,26220300,,,,,,,,,
+2623300101,26230100,ESC NORMAL  [26230100],Pluviométrica,Antioquia,San Andrés,1200.0,-75.66666667,6.916666667,Cauca,Directos Río Cauca  entre Río San Juan y  Pto Valdivia
+2623300201,26230200,SABANALARGA [26230200],Pluviométrica,Antioquia,Sabanalarga,134.0,-75.815138889,6.843833333,Cauca,Directos Río Cauca  entre Río San Juan y  Pto Valdivia
+2623500101,26230100,ESC NORMAL  [26230100],Pluviométrica,Antioquia,San Andrés,1200.0,-75.66666667,6.916666667,Cauca,Directos Río Cauca  entre Río San Juan y  Pto Valdivia
+2624000101,26240100,GUARUMO-LA LUCHA [26240100],Pluviométrica,Antioquia,Cáceres,70.0,-75.21491667,7.862916667,Cauca,Río Taraza - Río Man
+2624000102,26240100,GUARUMO-LA LUCHA [26240100],Pluviométrica,Antioquia,Cáceres,70.0,-75.21491667,7.862916667,Cauca,Río Taraza - Río Man
+2624000301,26240300,,,,,,,,,
+2624600102,26240100,GUARUMO-LA LUCHA [26240100],Pluviométrica,Antioquia,Cáceres,70.0,-75.21491667,7.862916667,Cauca,Río Taraza - Río Man
+2624600103,26240100,GUARUMO-LA LUCHA [26240100],Pluviométrica,Antioquia,Cáceres,70.0,-75.21491667,7.862916667,Cauca,Río Taraza - Río Man
+2624700103,26240100,GUARUMO-LA LUCHA [26240100],Pluviométrica,Antioquia,Cáceres,70.0,-75.21491667,7.862916667,Cauca,Río Taraza - Río Man
+2624700104,26240100,GUARUMO-LA LUCHA [26240100],Pluviométrica,Antioquia,Cáceres,70.0,-75.21491667,7.862916667,Cauca,Río Taraza - Río Man
+2624700108,26240100,GUARUMO-LA LUCHA [26240100],Pluviométrica,Antioquia,Cáceres,70.0,-75.21491667,7.862916667,Cauca,Río Taraza - Río Man
+2624700109,26240100,GUARUMO-LA LUCHA [26240100],Pluviométrica,Antioquia,Cáceres,70.0,-75.21491667,7.862916667,Cauca,Río Taraza - Río Man
+2624700110,26240110,,,,,,,,,
+2624700113,26240110,,,,,,,,,
+2624700114,26240110,,,,,,,,,
+2624700115,26240110,,,,,,,,,
+2624700117,26240110,,,,,,,,,
+2624700118,26240110,,,,,,,,,
+2624700121,26240120,PUERTO VALDIVIA [26240120],Pluviográfica,Antioquia,Valdivia,125.0,-75.43333333,7.3,Cauca,Río Taraza - Río Man
+2624700202,26240200,,,,,,,,,
+2624700301,26240300,,,,,,,,,
+2625500102,26250100,SANTA CRUZ HACIENDA [26250100],Pluviográfica,Antioquia,Cáceres,125.0,-75.25,7.5,Cauca,Directos al Cauca entre Pto Valdivia y Río Nechí
+5300000201,53000200,,,,,,,,,
+5300000203,53000200,,,,,,,,,
+5300600101,53000100,,,,,,,,,
+5300900102,53000100,,,,,,,,,
+5301100101,53010100,,,,,,,,,
+5301300101,53010100,,,,,,,,,
+5301400101,53010100,,,,,,,,,
+5301400108,53010100,,,,,,,,,
+5301500102,53010100,,,,,,,,,
+5301500106,53010100,,,,,,,,,
+5301500107,53010100,,,,,,,,,
+5400000201,54000200,,,,,,,,,
+5420410107,54200100,,,,,,,,,
+5420410112,54200110,,,,,,,,,
+5420410113,54200110,,,,,,,,,
+5420410114,54200110,,,,,,,,,
+5420410115,54200110,,,,,,,,,
+5420410116,54200110,,,,,,,,,
+5420410117,54200110,,,,,,,,,
+5420410118,54200110,,,,,,,,,
+5421200108,54210100,,,,,,,,,
+5421200111,54210110,,,,,,,,,

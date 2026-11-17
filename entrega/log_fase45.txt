@@ -1,0 +1,76 @@
+==========================================================================
+FASE 4.5 - interpretacion climatologica de la red funcional
+==========================================================================
+    [aviso] pykan no utilizable (NameError); KANPropia
+    modelos cargados: cabeza KAN (KANPropia) y cabeza lineal; codificador en modo 'informado' con 5 neuronas funcionales
+
+[1] funciones peso w_k(t) del codificador: reparto mensual de |w_k|
+neurona mes_dominante  peso_mes_dominante  cambios_de_signo
+     z1           ene               0.154                 4
+     z2           oct               0.176                 2
+     z3           feb               0.173                 4
+     z4           ene               0.157                 1
+     z5           ene               0.167                 2
+    z1: 44 % de |w| en las dos temporadas de lluvia (mar-may y sep-nov, que ocupan el 50 % del anio)
+    z2: 54 % de |w| en las dos temporadas de lluvia (mar-may y sep-nov, que ocupan el 50 % del anio)
+    z3: 40 % de |w| en las dos temporadas de lluvia (mar-may y sep-nov, que ocupan el 50 % del anio)
+    z4: 47 % de |w| en las dos temporadas de lluvia (mar-may y sep-nov, que ocupan el 50 % del anio)
+    z5: 26 % de |w| en las dos temporadas de lluvia (mar-may y sep-nov, que ocupan el 50 % del anio)
+
+[2] activaciones de la cabeza KAN: 8 entradas x 5 salidas
+ entrada  amplitud_PC1  amplitud_total  no_linealidad estado
+      z1     1.736e+01       2.294e+01      4.710e-01 activa
+longitud     1.889e+01       1.600e+01      8.485e-01 activa
+      z3     6.433e+00       1.597e+01      7.392e-01 activa
+ latitud     7.942e+00       1.162e+01      9.425e-01 activa
+      z4     2.762e+00       1.072e+01      7.659e-01 activa
+ altitud     3.135e+00       6.817e+00      8.750e-01 activa
+      z2     0.000e+00       6.180e-06      0.000e+00 podada
+      z5     0.000e+00       6.180e-06      0.000e+00 podada
+    entradas que la KAN ANULA (activacion identicamente nula): z2, z5
+    la red se queda con 6 de 8 entradas: z1, z3, z4, altitud, longitud, latitud
+
+[3] ajuste simbolico de las activaciones (R2, salida PC1)
+    z1       : mejor forma = cubica                   R2 = 0.9935 (ajustado 0.9934)
+    z2       : activacion nula (entrada podada por la KAN), sin ajuste simbolico
+    z3       : mejor forma = cubica                   R2 = 0.6962 (ajustado 0.6915)
+    z4       : mejor forma = valor absoluto           R2 = 0.9552 (ajustado 0.9550)
+    z5       : activacion nula (entrada podada por la KAN), sin ajuste simbolico
+    altitud  : mejor forma = cubica                   R2 = 0.6257 (ajustado 0.6200)
+    longitud : mejor forma = cubica                   R2 = 0.8382 (ajustado 0.8357)
+    latitud  : mejor forma = logaritmica: a+b ln(1+|x|) R2 = 0.2259 (ajustado 0.2220)
+    (se excluyeron las entradas podadas: z2, z5)
+    activacion mejor explicada: z1 con cubica, R2 = 0.9935, coeficientes [0.3736, -9.1829, -8.3972, -2.0964]
+
+[4] cabeza lineal vs pendiente media de las activaciones KAN (PC1)
+ entrada  coef_lineal_PC1  pendiente_media_KAN_PC1     razon estado
+      z1          +0.0063                  -3.8955 -620.7274 activa
+      z2          +0.3882                  +0.0000   +0.0000 podada
+      z3          +0.0880                  -0.8011   -9.1050 activa
+      z4          -0.7031                  -0.3383   +0.4811 activa
+      z5          -0.3948                  -0.0000   +0.0000 podada
+ altitud          -0.9373                  -0.1665   +0.1776 activa
+longitud          +1.1385                  +1.8301   +1.6076 activa
+ latitud          +1.4735                  +0.5572   +0.3781 activa
+    correlacion sobre las 8 entradas:            r = 0.370
+    correlacion solo sobre las entradas activas: r = 0.401
+    (la discrepancia la producen las entradas que la KAN anula y el modelo lineal si usa)
+
+[5] peores casos (mayor error L2 relativo)
+        bloque STATION_ID         NOMBRE MUNICIPIO  YEAR  ALT_EST  dist_km  l2_rel  acum_obs  acum_pred
+test 2001-2003 2614100104     LOS BANCOS     Tuluá  2001  1956.00     2.79    1.02    330.43     687.56
+test 2001-2003 2614100104     LOS BANCOS     Tuluá  2002  1956.00     2.79    0.98    361.78     726.54
+test 2001-2003 5301500102   LOBOGUERRERO     Dagua  2002   702.00     1.92    0.90    388.01     761.48
+test 2001-2003 5301500102   LOBOGUERRERO     Dagua  2003   702.00     1.92    0.81    413.62     775.75
+test 2001-2003 2613100104        GUACARI   Guacarí  2001      NaN     0.94    0.80    295.71     538.18
+test 2001-2003 2612000106       TESORITO   TORIBIO  2001  2339.00     6.77    0.69    371.76     635.33
+    reservadas 2614400101       ALEGRIAS   Sevilla  1987  2290.00     1.44    0.68    389.04     657.81
+test 2001-2003 2613100104        GUACARI   Guacarí  2002      NaN     0.94    0.67    348.19     559.30
+test 2001-2003 2612000106       TESORITO   TORIBIO  2003  2339.00     6.77    0.58    396.04     650.11
+test 2001-2003 2614100104     LOS BANCOS     Tuluá  2003  1956.00     2.79    0.58    446.65     710.38
+    reservadas 2622500102 LLOREDA GRASAS     Yumbo  2001      NaN     2.72    0.57    327.48     521.26
+test 2001-2003 2612000108      LA CALERA   MIRANDA  2002  1920.00     2.51    0.56    420.45     668.47
+
+    error L2 relativo medio: test 0.258 | reservadas 0.230
+    por altitud: estaciones sobre la mediana 0.243 | bajo la mediana 0.226
+    correlacion de Spearman del error con la altitud: +0.066 | con la distancia al pixel: +0.070

@@ -1,0 +1,104 @@
+==========================================================================
+FASE 4b - codificador funcional APRENDIBLE, particion oficial
+==========================================================================
+    base de las w_k: B-spline cubica, 8 nodos interiores -> NB = 12
+    particion de la base: suma de filas = 1.000000 a 1.000000
+    Wx = int B Phi^T: (12, 5) | ||Wx|| = 175.82
+    Gram W de Fourier: traza 1092.00
+
+[0] verificacion del producto interno del codificador
+    a^T Wx c            = -63.0957660236
+    int w(t) X(t) dt    = -63.0957660236   (cuadratura fina, 2e5 nodos)
+    error relativo      = 1.13e-13 (CUMPLE <= 1e-4)
+
+[1] datos (coordenadas reales de la fase 3b): 2324 pares | 121 estaciones | 1981-2003
+    particion OFICIAL: train 1351 (1981-1995) | val 398 (1996-2000) | test 260 (2001-2003)
+    estaciones reservadas por sorteo propio (el docente no publico lista): 16 de 121 -> 315 pares
+
+[2] decodificador FPCA (solo train): PC1 63.1% PC2 16.9% PC3 9.0% PC4 6.0% PC5 4.9%
+    M = 5 componentes para el 99 % | ortonormalidad max|B^T W B - I| = 8.88e-16
+    [aviso] pykan no utilizable (NameError); KANPropia
+
+[3] parametros de las cabezas: KAN (propia) 405 | MLP (h=29) 411 | diferencia 1.5 %
+    codificador aprendible: 12 x 5 = 60 parametros adicionales
+
+[4] entrenamiento: 3 cabezas x 3 codificadores x 3 semillas
+    fijo W^1/2         lineal  s11: val 0.2991 | test L2rel 0.253 KGE +0.355 | resv L2rel 0.239 (3999 ep)
+    fijo W^1/2         lineal  s23: val 0.3415 | test L2rel 0.277 KGE +0.142 | resv L2rel 0.262 (660 ep)
+    fijo W^1/2         lineal  s37: val 0.3006 | test L2rel 0.253 KGE +0.350 | resv L2rel 0.239 (3999 ep)
+    fijo W^1/2         mlp     s11: val 0.2135 | test L2rel 0.256 KGE +0.634 | resv L2rel 0.206 (910 ep)
+    fijo W^1/2         mlp     s23: val 0.2286 | test L2rel 0.240 KGE +0.569 | resv L2rel 0.218 (680 ep)
+    fijo W^1/2         mlp     s37: val 0.2356 | test L2rel 0.247 KGE +0.602 | resv L2rel 0.218 (800 ep)
+    [aviso] pykan no utilizable (NameError); KANPropia
+    fijo W^1/2         kan     s11: val 0.2693 | test L2rel 0.246 KGE +0.531 | resv L2rel 0.227 (3999 ep)
+    [aviso] pykan no utilizable (NameError); KANPropia
+    fijo W^1/2         kan     s23: val 0.2694 | test L2rel 0.246 KGE +0.531 | resv L2rel 0.227 (3999 ep)
+    [aviso] pykan no utilizable (NameError); KANPropia
+    fijo W^1/2         kan     s37: val 0.2699 | test L2rel 0.245 KGE +0.532 | resv L2rel 0.227 (3999 ep)
+    aprend. aleatorio  lineal  s11: val 0.3188 | test L2rel 0.274 KGE +0.262 | resv L2rel 0.254 (2110 ep)
+    aprend. aleatorio  lineal  s23: val 0.3188 | test L2rel 0.269 KGE +0.259 | resv L2rel 0.254 (2130 ep)
+    aprend. aleatorio  lineal  s37: val 0.3072 | test L2rel 0.260 KGE +0.301 | resv L2rel 0.248 (3230 ep)
+    aprend. aleatorio  mlp     s11: val 0.2343 | test L2rel 0.249 KGE +0.583 | resv L2rel 0.235 (1020 ep)
+    aprend. aleatorio  mlp     s23: val 0.2087 | test L2rel 0.249 KGE +0.631 | resv L2rel 0.227 (990 ep)
+    aprend. aleatorio  mlp     s37: val 0.2234 | test L2rel 0.242 KGE +0.634 | resv L2rel 0.228 (1180 ep)
+    [aviso] pykan no utilizable (NameError); KANPropia
+    aprend. aleatorio  kan     s11: val 0.2903 | test L2rel 0.250 KGE +0.489 | resv L2rel 0.244 (3999 ep)
+    [aviso] pykan no utilizable (NameError); KANPropia
+    aprend. aleatorio  kan     s23: val 0.3095 | test L2rel 0.256 KGE +0.433 | resv L2rel 0.246 (3999 ep)
+    [aviso] pykan no utilizable (NameError); KANPropia
+    aprend. aleatorio  kan     s37: val 0.2905 | test L2rel 0.250 KGE +0.486 | resv L2rel 0.244 (3999 ep)
+    aprend. informado  lineal  s11: val 0.3195 | test L2rel 0.273 KGE +0.248 | resv L2rel 0.257 (1900 ep)
+    aprend. informado  lineal  s23: val 0.3241 | test L2rel 0.270 KGE +0.243 | resv L2rel 0.256 (1700 ep)
+    aprend. informado  lineal  s37: val 0.3365 | test L2rel 0.277 KGE +0.195 | resv L2rel 0.263 (1030 ep)
+    aprend. informado  mlp     s11: val 0.2155 | test L2rel 0.234 KGE +0.638 | resv L2rel 0.208 (1030 ep)
+    aprend. informado  mlp     s23: val 0.2084 | test L2rel 0.239 KGE +0.662 | resv L2rel 0.227 (1220 ep)
+    aprend. informado  mlp     s37: val 0.2211 | test L2rel 0.244 KGE +0.624 | resv L2rel 0.239 (1920 ep)
+    [aviso] pykan no utilizable (NameError); KANPropia
+    aprend. informado  kan     s11: val 0.2904 | test L2rel 0.251 KGE +0.488 | resv L2rel 0.244 (3999 ep)
+    [aviso] pykan no utilizable (NameError); KANPropia
+    aprend. informado  kan     s23: val 0.2816 | test L2rel 0.258 KGE +0.491 | resv L2rel 0.230 (3999 ep)
+    [aviso] pykan no utilizable (NameError); KANPropia
+    aprend. informado  kan     s37: val 0.2952 | test L2rel 0.253 KGE +0.479 | resv L2rel 0.242 (3999 ep)
+
+[5] resumen por codificador y cabeza (media +- sd sobre semillas)
+                         test_l2_rel         test_kge         test_sesgo_acum_pct         resv_l2_rel         resv_kge        
+                                mean     std     mean     std                mean     std        mean     std     mean     std
+codificador       cabeza                                                                                                      
+aprend. aleatorio kan         0.2520  0.0035   0.4693  0.0314              6.2882  1.2014      0.2444  0.0012   0.4211  0.0155
+                  lineal      0.2675  0.0072   0.2736  0.0234              4.6634  0.3775      0.2518  0.0034   0.2577  0.0248
+                  mlp         0.2467  0.0039   0.6160  0.0289              6.7268  1.0248      0.2301  0.0043   0.5430  0.1137
+aprend. informado kan         0.2538  0.0036   0.4860  0.0059              5.8870  0.4031      0.2387  0.0076   0.4279  0.0511
+                  lineal      0.2733  0.0036   0.2288  0.0291              5.4879  0.4130      0.2589  0.0040   0.2114  0.0300
+                  mlp         0.2392  0.0052   0.6412  0.0193              6.7479  0.8685      0.2246  0.0155   0.6275  0.0807
+fijo W^1/2        kan         0.2455  0.0000   0.5310  0.0005              5.9222  0.0065      0.2271  0.0001   0.4279  0.0003
+                  lineal      0.2608  0.0136   0.2823  0.1213              3.2273  1.5250      0.2467  0.0136   0.2633  0.1313
+                  mlp         0.2476  0.0079   0.6017  0.0325              5.9835  0.7229      0.2138  0.0068   0.6965  0.0287
+
+    L2 relativo medio en test por codificador:
+      fijo W^1/2         0.2513
+      aprend. aleatorio  0.2554
+      aprend. informado  0.2554
+    aprendible informado vs fijo: -1.6 % de mejora
+
+[5b] barrido del numero de neuronas funcionales (cabeza MLP, 2 semillas)
+    n_neu 1 | fijo W^1/2         | test L2rel 0.2236
+    n_neu 1 | aprend. aleatorio  | test L2rel 0.2358
+    n_neu 1 | aprend. informado  | test L2rel 0.2310
+    n_neu 2 | fijo W^1/2         | test L2rel 0.2221
+    n_neu 2 | aprend. aleatorio  | test L2rel 0.2311
+    n_neu 2 | aprend. informado  | test L2rel 0.2293
+    n_neu 3 | fijo W^1/2         | test L2rel 0.2175
+    n_neu 3 | aprend. aleatorio  | test L2rel 0.2485
+    n_neu 3 | aprend. informado  | test L2rel 0.2381
+    n_neu 5 | fijo W^1/2         | test L2rel 0.2480
+    n_neu 5 | aprend. aleatorio  | test L2rel 0.2490
+    n_neu 5 | aprend. informado  | test L2rel 0.2365
+
+codificador  aprend. aleatorio  aprend. informado  fijo W^1/2  ganancia_informado_pct
+n_neuronas                                                                           
+1                       0.2358             0.2310      0.2236                 -3.3065
+2                       0.2311             0.2293      0.2221                 -3.2725
+3                       0.2485             0.2381      0.2175                 -9.4839
+5                       0.2490             0.2365      0.2480                  4.6435
+
+[6] modelos guardados en entrega/modelos/ (KAN semilla 23, lineal semilla 11, codificador aprend. informado)
