@@ -1,0 +1,19 @@
+fuente,evento,fecha,dia,valor_mm_dia
+estaciones,valle (mínimo),05-ene,4,3.596084557521131
+estaciones,inicio temporada (máx. D),28-feb,58,4.846569229473294
+estaciones,pico (máximo),22-abr,111,6.121546585405239
+estaciones,fin temporada (mín. D),17-jun,167,4.3764115033878745
+estaciones,valle (mínimo),10-ago,221,2.615033724273861
+estaciones,inicio temporada (máx. D),30-sep,272,5.186192510859001
+estaciones,pico (máximo),12-nov,315,7.578970421651577
+estaciones,fin temporada (mín. D),31-dic,364,1.285330239028867
+satelite,pico (máximo),21-ene,20,6.655064765571111
+satelite,valle (mínimo),16-feb,46,6.2805038600747825
+satelite,inicio temporada (máx. D),11-abr,100,10.024277432739948
+satelite,pico (máximo),14-may,133,12.782905638140722
+satelite,fin temporada (mín. D),13-jun,163,10.236823229889364
+satelite,valle (mínimo),16-jul,196,7.6843815481636595
+satelite,inicio temporada (máx. D),10-oct,282,12.693332597213491
+satelite,pico (máximo),03-nov,306,14.621900987259037
+satelite,fin temporada (mín. D),29-nov,332,10.957098127438464
+satelite,valle (mínimo),19-dic,352,7.616495025619148

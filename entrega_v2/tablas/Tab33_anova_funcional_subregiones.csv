@@ -1,0 +1,3 @@
+variable,n_Pacífico,n_Andina valle (<1200 m),n_Andina ladera (1200-2000 m),n_Andina alta (>2000 m),F_max_obs,fecha_F_max,c_max_95_perm,p_global_perm,permutaciones,intervalos_F>c95
+lluvia estación Y(t),22,48,56,15,13.995833446462957,13-sep,3.4562968489904944,0.0004997501249375312,2000,01-ene a 31-dic
+sesgo d(t)=estación-satélite,22,48,56,15,7.46177397239963,01-ene,4.07506079008776,0.0029985007496251873,2000,01-ene a 16-feb; 29-nov a 25-dic

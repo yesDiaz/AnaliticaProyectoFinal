@@ -1,0 +1,14 @@
+Proyecto final Analítica de Datos — scripts (versión 21-nov-2026)
+
+Estructura esperada:
+  datos/            datos del curso (P_*.xlsx/csv, CVC_Wheather_Stations_Long_Lat.csv,
+                    CatalogoEstacionesElevacion.xlsx, ImagenesSatelitePentadal.zip)
+  entrega/proyecto_final.py, entrega/proyecto_final.R
+  entrega/datos_externos/oni.ascii.txt (ONI NOAA-CPC), srtm90m_estaciones.csv (SRTM 90 m, OpenTopoData)
+
+Ejecución (desde entrega/):
+  python proyecto_final.py            # fases 0, 1, 2, 3, 3b, interfaz y 4 (~9 min, semilla 2026)
+  Rscript proyecto_final.R            # fases 0, 0b, 1, 2, 3 en R (~3 min; requiere las tablas de Python)
+Salidas: tablas/, tablas_R/, figuras/, cache/, predicciones_estaciones_reservadas.csv
+Versiones: Python 3.12, numpy 2.5.4, pandas 3.1.1, scipy 1.18.1, matplotlib 3.11.2, torch 2.15 (CPU),
+           scikit-fda 0.10.1; R 4.3.3, data.table, readxl, fda 6.3.0, fda.usc 2.2.0.

@@ -1,0 +1,21 @@
+bloque,modelo,fase,n,l2_rel
+test_temporal,satelital_sin_corregir,El Nino,79,0.46009292749595415
+test_temporal,satelital_sin_corregir,Neutro,162,0.41431696140247937
+test_temporal,lineal,El Nino,79,0.2612287201729818
+test_temporal,lineal,Neutro,162,0.24380695471658137
+test_temporal,mlp,El Nino,79,0.26141893763137675
+test_temporal,mlp,Neutro,162,0.2341887565647715
+test_temporal,kan,El Nino,79,0.2410570383731243
+test_temporal,kan,Neutro,162,0.24065248737181938
+reservadas,satelital_sin_corregir,El Nino,104,0.5034296133567675
+reservadas,satelital_sin_corregir,La Nina,131,0.30200662215753826
+reservadas,satelital_sin_corregir,Neutro,225,0.3838121167552644
+reservadas,lineal,El Nino,104,0.30538481542877755
+reservadas,lineal,La Nina,131,0.22873510023554655
+reservadas,lineal,Neutro,225,0.23515101052317067
+reservadas,mlp,El Nino,104,0.2692651059670087
+reservadas,mlp,La Nina,131,0.21478099921027788
+reservadas,mlp,Neutro,225,0.2312559037002405
+reservadas,kan,El Nino,104,0.25657948791209423
+reservadas,kan,La Nina,131,0.21725580847254583
+reservadas,kan,Neutro,225,0.23280489608480123

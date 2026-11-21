@@ -1,0 +1,2 @@
+estaciones_con_ambas,sesgo_m(SRTM-catalogo),MAE_m,RMSE_m,mediana_abs_m,max_abs_m,%_dentro_100m,r_Pearson,estaciones_con_alt_SRTM_imputada,elegidas_con_alt_SRTM
+126,53.93650793650794,129.25396825396825,276.31242381687355,36.5,1660.0,70.63492063492063,0.931702962634442,87,38

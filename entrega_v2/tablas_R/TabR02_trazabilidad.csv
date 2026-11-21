@@ -1,0 +1,12 @@
+paso,estaciones,pares_estacion_anio,dias_validos,valores_afectados
+P0 crudo,323,5514,1929453,
+P1 valores imposibles,323,5514,1929452,1
+P2 totales mensuales en un día,323,5514,1929121,331
+P3 errores de digitación,323,5514,1929116,5
+P3b meses con escala errónea,323,5514,1929087,29
+P3c bloques copiados,323,5511,1926943,2144
+P4 ceros falsos,323,5511,1924237,2706
+P5 días faltantes,323,5511,1924237,88373
+P6 cobertura,309,4849,1762206,665
+P7 estaciones >= 5 años,274,4783,1738395,66
+P8 georreferenciadas en la malla,161,2936,1067340,1847
