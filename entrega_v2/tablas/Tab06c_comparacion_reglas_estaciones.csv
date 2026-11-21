@@ -1,0 +1,6 @@
+regla,regla_anual,regla_periodo,estaciones_todas,estaciones_con_coord,Pacifico_con_coord,Andina_con_coord,pares_estacion_anio_utilizables
+OMM,año: <=10 faltantes y <=5 seguidos,estación: >=80 % de años válidos (>=19 de 23),123,77,6,71,1634.0
+NOAA,año: igual que OMM,estación: >=10 años válidos,233,141,20,121,2605.0
+Nacional (IDEAM),año: <=25 % faltantes (se imputa),estación: >45 % de datos en 1981-2003,237,141,22,119,2945.0
+Solo regla anual del profesor,año: <=25 % faltantes (se imputa),estación: >=1 año utilizable,313,176,27,149,3164.0
+universo (con coordenadas en la malla),,,323,178,28,150,

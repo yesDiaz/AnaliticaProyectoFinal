@@ -1,0 +1,6 @@
+R version 4.3.3 (2024-02-29)
+data.table 1.14.10
+readxl 1.4.3
+fda 6.3.0
+fda.usc 2.2.0
+terra 1.7.65

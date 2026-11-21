@@ -1,0 +1,17 @@
+fuente,evento,dia,fecha
+estaciones,maximo,111.45,22-abr
+estaciones,maximo,304.31,01-nov
+estaciones,minimo,27.27,28-ene
+estaciones,minimo,206.56,26-jul
+estaciones,inicio_temporada,64.78,06-mar
+estaciones,inicio_temporada,257.78,15-sep
+estaciones,fin_temporada,153.8,03-jun
+estaciones,fin_temporada,355.73,22-dic
+satelite,maximo,126.22,07-may
+satelite,maximo,300.73,28-oct
+satelite,minimo,33.61,03-feb
+satelite,minimo,210.0,30-jul
+satelite,inicio_temporada,84.18,26-mar
+satelite,inicio_temporada,246.55,04-sep
+satelite,fin_temporada,171.64,21-jun
+satelite,fin_temporada,350.69,17-dic

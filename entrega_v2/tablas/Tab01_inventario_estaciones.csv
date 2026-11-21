@@ -1,0 +1,4 @@
+fuente,filas,estaciones,anio_min,anio_max,valor_max,no_enteros,negativos,nulos
+P_1930_1979.xlsx,984226,264,1930,1979,736.0,9010,0,0
+P_1980_1990.csv,997791,302,1980,1990,859375.0,9746,0,0
+P_1991_2003.csv,1010677,284,1991,2003,600.0,15961,0,0
