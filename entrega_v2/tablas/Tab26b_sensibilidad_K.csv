@@ -1,0 +1,4 @@
+caso,d_integrado_mm,dias_sat>est,dias_est>sat,intervalos_sat>est,intervalos_est>sat
+ambas K=6 (principal),-29.819818777688276,61,67,30-abr a 29-jun,03-ene a 10-mar
+ambas K=11,-35.10291137377078,81,64,24-abr a 16-jun; 27-oct a 13-nov; 23-dic a 31-dic,01-ene a 14-ene; 06-feb a 27-mar
+estación K=6 vs satélite K=11 (no recomendado),-35.231543450746976,149,127,08-abr a 07-jun; 21-ago a 05-nov; 21-dic a 31-dic,01-ene a 09-ene; 27-ene a 21-mar; 23-jun a 31-jul; 22-nov a 16-dic

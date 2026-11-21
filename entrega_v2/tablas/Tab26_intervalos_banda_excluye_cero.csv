@@ -1,0 +1,5 @@
+unidad,signo,desde,hasta,dias
+pares estación-año,estación > satélite,01-ene,22-mar,81
+pares estación-año,estación < satélite,03-abr,31-dic,273
+estaciones (media por estación),estación > satélite,03-ene,10-mar,67
+estaciones (media por estación),estación < satélite,30-abr,29-jun,61

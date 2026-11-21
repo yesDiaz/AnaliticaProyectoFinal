@@ -1,0 +1,16 @@
+cabeza,covariables,parametros_cabeza,parametros_totales,hp,epocas,dif_%_KAN_vs_MLP
+lineal,satélite solo,35,71,"{""lr"": 0.03}",405,
+lineal,altitud sola,10,10,"{""lr"": 0.03}",405,
+lineal,satélite + altitud,40,76,"{""lr"": 0.03}",405,
+lineal,satélite + ONI,40,76,"{""lr"": 0.03}",405,
+lineal,satélite + altitud + ONI,45,81,"{""lr"": 0.03}",405,
+MLP,satélite solo,329,365,"{""lr"": 0.01, ""wd"": 0.0}",365,
+MLP,altitud sola,187,187,"{""lr"": 0.01, ""wd"": 0.0}",365,
+MLP,satélite + altitud,369,405,"{""lr"": 0.01, ""wd"": 0.0}",365,
+MLP,satélite + ONI,369,405,"{""lr"": 0.01, ""wd"": 0.0}",365,
+MLP,satélite + altitud + ONI,397,433,"{""lr"": 0.01, ""wd"": 0.0}",365,0.5063291139240507
+KAN,satélite solo,335,371,"{""lr"": 0.01, ""lam"": 0.001}",410,
+KAN,altitud sola,185,185,"{""lr"": 0.01, ""lam"": 0.001}",410,
+KAN,satélite + altitud,365,401,"{""lr"": 0.01, ""lam"": 0.001}",410,
+KAN,satélite + ONI,365,401,"{""lr"": 0.01, ""lam"": 0.001}",410,
+KAN,satélite + altitud + ONI,395,431,"{""lr"": 0.01, ""lam"": 0.001}",410,

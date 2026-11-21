@@ -1,0 +1,324 @@
+STATION_ID,region,con_coordenadas,lon,lat,alt_m,alt_fuente,pct_datos_1981_2003,anios_validos_OMM,anios_con_<=25%_faltantes,OMM,NOAA,Nacional,ELEGIDA
+2610000101,Andina (Cauca),False,,,,,44.2,7,8,False,False,False,False
+2610000102,Andina (Cauca),True,-76.59822768,3.088711837,986.0,catálogo,99.4,21,23,True,True,True,True
+2610000103,Andina (Cauca),True,-75.91793227,4.651322477,968.0,catálogo,98.7,20,23,True,True,True,True
+2610000104,Andina (Cauca),True,-76.04332048,4.524880111,909.0,SRTM 90 m,86.3,17,20,False,True,True,True
+2610000105,Andina (Cauca),True,-76.0232876,4.622550369,939.0,catálogo,100.0,23,23,True,True,True,True
+2610000107,Andina (Cauca),True,-76.36067818,3.615765097,981.0,SRTM 90 m,43.5,10,10,False,True,False,False
+2610000108,Andina (Cauca),True,-76.33568662,3.59878897,989.0,SRTM 90 m,43.5,10,10,False,True,False,False
+2610000109,Andina (Cauca),True,-76.30356373,3.583552884,1011.0,SRTM 90 m,4.3,1,1,False,False,False,False
+2610000110,Andina (Cauca),True,-76.03821861,4.50766552,950.0,SRTM 90 m,22.1,5,5,False,False,False,False
+2610000111,Andina (Cauca),True,-76.47042264,3.170509731,966.0,SRTM 90 m,84.1,18,19,False,True,True,True
+2610000113,Andina (Cauca),True,-76.57956688,3.055881485,1001.0,SRTM 90 m,83.0,19,19,True,True,True,True
+2610000115,Andina (Cauca),True,-75.96923743,4.783417255,908.0,catálogo,37.1,4,9,False,False,False,False
+2610000116,Andina (Cauca),True,-76.4754449,3.451669895,953.0,SRTM 90 m,18.5,1,3,False,False,False,False
+2610000201,Andina (Cauca),False,,,,,0.4,0,0,False,False,False,False
+2610000202,Andina (Cauca),False,,,,,98.1,20,22,True,True,True,False
+2610300101,Andina (Cauca),False,,,,,58.0,10,12,False,True,True,False
+2610300102,Andina (Cauca),False,,,,,66.3,13,14,False,True,True,False
+2610300103,Andina (Cauca),False,,,,,82.5,19,19,True,True,True,False
+2610400101,Andina (Cauca),False,,,,,83.3,19,19,True,True,True,False
+2611000101,Andina (Cauca),False,,,,,82.0,17,19,False,True,True,False
+2611000102,Andina (Cauca),False,,,,,98.3,19,23,True,True,True,False
+2611000201,Andina (Cauca),False,,,,,79.7,15,18,False,True,True,False
+2611200101,Andina (Cauca),False,,,,,94.2,20,21,True,True,True,False
+2611400101,Andina (Cauca),False,,,,,98.8,21,23,True,True,True,False
+2611400102,Andina (Cauca),False,,,,,99.2,20,23,True,True,True,False
+2611400103,Andina (Cauca),False,,,,,69.5,16,16,False,True,True,False
+2611400104,Andina (Cauca),False,,,,,62.8,13,14,False,True,True,False
+2611400105,Andina (Cauca),False,,,,,24.0,3,4,False,False,False,False
+2611600101,Andina (Cauca),False,,,,,99.4,21,23,True,True,True,False
+2611600102,Andina (Cauca),False,,,,,68.8,14,16,False,True,True,False
+2611700102,Andina (Cauca),False,,,,,82.4,16,19,False,True,True,False
+2611700103,Andina (Cauca),False,,,,,98.6,21,22,True,True,True,False
+2611700301,Andina (Cauca),False,,,,,100.0,23,23,True,True,True,False
+2611800101,Andina (Cauca),False,,,,,69.5,16,16,False,True,True,False
+2611800102,Andina (Cauca),True,-76.51217954,3.075837508,990.0,catálogo,14.4,3,3,False,False,False,False
+2611800201,Andina (Cauca),False,,,,,90.4,18,21,False,True,True,False
+2612000102,Andina (Cauca),True,-76.2807499,3.162569171,1026.0,catálogo,45.6,10,10,False,True,True,True
+2612000103,Andina (Cauca),False,,,,,95.5,19,22,True,True,True,False
+2612000104,Andina (Cauca),False,,,,,10.7,1,2,False,False,False,False
+2612000105,Andina (Cauca),True,-76.19655909,3.063802867,1838.0,catálogo,100.0,23,23,True,True,True,True
+2612000106,Andina (Cauca),False,,,,,99.8,23,23,True,True,True,False
+2612000107,Andina (Cauca),False,,,,,99.9,23,23,True,True,True,False
+2612000108,Andina (Cauca),True,-76.12988962,3.197137839,1920.0,catálogo,96.4,16,23,False,True,True,True
+2612000109,Andina (Cauca),False,,,,,99.3,20,23,True,True,True,False
+2612000110,Andina (Cauca),False,,,,,99.6,20,23,True,True,True,False
+2612000111,Andina (Cauca),True,-76.31752672,3.112426323,1078.0,SRTM 90 m,98.1,18,23,False,True,True,True
+2612000112,Andina (Cauca),False,,,,,99.7,22,23,True,True,True,False
+2612000113,Andina (Cauca),True,-76.36922702,3.059030494,1102.0,SRTM 90 m,95.1,15,22,False,True,True,True
+2612000114,Andina (Cauca),True,-76.42272245,3.23050729,970.0,SRTM 90 m,27.6,3,6,False,False,False,False
+2612000201,Andina (Cauca),False,,,,,82.7,19,19,True,True,True,False
+2612000202,Andina (Cauca),False,,,,,79.5,11,19,False,True,True,False
+2612000301,Andina (Cauca),False,,,,,45.4,10,10,False,True,True,False
+2612000302,Andina (Cauca),False,,,,,11.8,0,3,False,False,False,False
+2612200101,Andina (Cauca),True,-76.28126103,3.301347349,1019.0,SRTM 90 m,0.1,0,0,False,False,False,False
+2612200103,Andina (Cauca),True,-76.10767991,3.26343271,2380.0,catálogo,94.2,18,21,False,True,True,True
+2612200104,Andina (Cauca),True,-76.409201,3.287810097,980.0,catálogo,99.8,22,23,True,True,True,True
+2612200105,Andina (Cauca),True,-76.06886707,3.226512676,3968.0,SRTM 90 m,90.4,17,21,False,True,True,True
+2612200201,Andina (Cauca),False,,,,,5.1,1,1,False,False,False,False
+2612200202,Andina (Cauca),False,,,,,81.3,18,18,False,True,True,False
+2612700101,Andina (Cauca),False,,,,,42.8,8,9,False,False,False,False
+2612700102,Andina (Cauca),False,,,,,4.3,1,1,False,False,False,False
+2612700103,Andina (Cauca),False,,,,,4.3,1,1,False,False,False,False
+2612700105,Andina (Cauca),True,-76.43353444,3.576068623,950.0,SRTM 90 m,99.9,23,23,True,True,True,True
+2612700106,Andina (Cauca),True,-76.40581086,3.521209874,956.0,SRTM 90 m,6.5,1,1,False,False,False,False
+2612700201,Andina (Cauca),False,,,,,99.6,22,23,True,True,True,False
+2612700202,Andina (Cauca),False,,,,,65.0,11,14,False,True,True,False
+2612700203,Andina (Cauca),False,,,,,95.9,19,20,True,True,True,False
+2612710101,Andina (Cauca),True,-76.24345683,3.321447001,1030.0,SRTM 90 m,98.8,21,23,True,True,True,True
+2612710103,Andina (Cauca),True,-76.34584312,3.417257806,980.0,catálogo,98.4,20,23,True,True,True,True
+2612710104,Andina (Cauca),True,-76.15557147,3.23963869,1960.0,catálogo,43.7,9,10,False,False,False,False
+2612710105,Andina (Cauca),True,-76.15408473,3.353922611,2160.0,catálogo,97.5,20,22,True,True,True,True
+2612710106,Andina (Cauca),True,-76.44375488,3.497373202,951.0,SRTM 90 m,94.7,17,22,False,True,True,True
+2612710107,Andina (Cauca),False,,,,,25.1,5,5,False,False,False,False
+2612710108,Andina (Cauca),True,-76.06322086,3.297139154,3380.0,catálogo,40.1,9,9,False,False,False,False
+2612710201,Andina (Cauca),False,,,,,34.8,8,8,False,False,False,False
+2612710202,Andina (Cauca),False,,,,,95.7,22,22,True,True,True,False
+2612710301,Andina (Cauca),False,,,,,100.0,23,23,True,True,True,False
+2612720101,Andina (Cauca),True,-76.39929801,3.461619926,959.0,SRTM 90 m,98.4,18,23,False,True,True,True
+2612720103,Andina (Cauca),True,-76.10797027,3.458328789,2410.0,catálogo,93.7,16,21,False,True,True,True
+2612720105,Andina (Cauca),True,-76.18283067,3.421140496,1370.0,catálogo,41.8,7,10,False,False,False,False
+2612720106,Andina (Cauca),True,-76.04655367,3.397140256,3180.0,catálogo,38.3,8,8,False,False,False,False
+2612720301,Andina (Cauca),False,,,,,100.0,23,23,True,True,True,False
+2612730201,Andina (Cauca),False,,,,,47.4,10,11,False,True,True,False
+2612800102,Andina (Cauca),True,-76.24337073,3.615045387,1063.0,SRTM 90 m,43.5,10,10,False,True,False,False
+2612800103,Andina (Cauca),True,-75.99655206,3.630475791,2875.0,catálogo,99.2,21,23,True,True,True,True
+2612800104,Andina (Cauca),True,-76.10778036,3.622056966,1555.0,catálogo,97.0,18,22,False,True,True,True
+2612800106,Andina (Cauca),True,-76.01613405,3.706386921,3052.0,catálogo,91.6,15,21,False,True,True,True
+2612800107,Andina (Cauca),True,-76.25786389,3.432024507,1028.0,SRTM 90 m,69.1,15,15,False,True,True,True
+2612800201,Andina (Cauca),False,,,,,43.5,8,9,False,False,False,False
+2612800202,Andina (Cauca),False,,,,,99.9,22,23,True,True,True,False
+2612810101,Andina (Cauca),True,-76.21364797,3.514925081,1218.0,SRTM 90 m,80.4,15,19,False,True,True,True
+2612810102,Andina (Cauca),True,-76.02342285,3.480999535,3690.0,catálogo,95.7,17,22,False,True,True,True
+2612810107,Andina (Cauca),True,-76.09500497,3.524281674,2070.0,catálogo,7.7,1,2,False,False,False,False
+2612810108,Andina (Cauca),True,-76.17102013,3.520692592,1500.0,catálogo,98.8,20,23,True,True,True,True
+2612810109,Andina (Cauca),True,-76.16179241,3.530439008,2100.0,catálogo,90.8,17,21,False,True,True,True
+2612810111,Andina (Cauca),False,,,,,6.9,1,1,False,False,False,False
+2612810112,Andina (Cauca),True,-76.17315452,3.578846908,1750.0,catálogo,99.0,21,23,True,True,True,True
+2612810114,Andina (Cauca),True,-76.14478076,3.544550365,2050.0,catálogo,14.3,0,3,False,False,False,False
+2612810117,Andina (Cauca),False,,,,,6.5,1,1,False,False,False,False
+2612810118,Andina (Cauca),True,-76.06322117,3.480474495,3520.0,catálogo,86.4,16,18,False,True,True,True
+2612810121,Andina (Cauca),True,-76.19000683,3.522367795,1462.0,SRTM 90 m,29.6,4,6,False,False,False,False
+2612810122,Andina (Cauca),True,-76.21786631,3.547701441,1170.0,catálogo,97.2,20,22,True,True,True,True
+2612810201,Andina (Cauca),False,,,,,99.6,21,23,True,True,True,False
+2612810202,Andina (Cauca),False,,,,,12.7,2,3,False,False,False,False
+2612810203,Andina (Cauca),False,,,,,69.4,15,16,False,True,True,False
+2613000101,Andina (Cauca),True,-76.27367568,3.687296317,1009.0,SRTM 90 m,41.1,8,9,False,False,False,False
+2613000102,Andina (Cauca),True,-76.19978902,3.649772533,1274.0,SRTM 90 m,95.1,18,21,False,True,True,True
+2613000103,Andina (Cauca),True,-76.1920665,3.665106882,1424.0,catálogo,99.8,22,23,True,True,True,True
+2613100101,Andina (Cauca),True,-76.26492106,3.763861906,1077.0,SRTM 90 m,8.7,1,1,False,False,False,False
+2613100102,Andina (Cauca),True,-76.36017745,3.758233233,953.0,SRTM 90 m,7.5,0,1,False,False,False,False
+2613100103,Andina (Cauca),True,-76.19524046,3.744594932,1704.0,catálogo,100.0,23,23,True,True,True,True
+2613100104,Andina (Cauca),True,-76.33203475,3.770231607,973.0,SRTM 90 m,98.4,20,23,True,True,True,True
+2613100105,Andina (Cauca),False,,,,,0.4,0,0,False,False,False,False
+2613100106,Andina (Cauca),True,-76.16561008,3.773298897,1818.0,SRTM 90 m,96.6,19,22,True,True,True,True
+2613100107,Andina (Cauca),True,-76.23053298,3.75499231,1192.0,catálogo,94.7,17,20,False,True,True,True
+2613200101,Andina (Cauca),True,-76.27280971,3.777727612,1046.0,SRTM 90 m,94.7,12,22,False,True,True,True
+2613200105,Andina (Cauca),True,-76.20965418,3.839630401,1950.0,catálogo,94.7,14,20,False,True,True,True
+2613600101,Andina (Cauca),True,-76.18129098,3.908689796,1650.0,catálogo,100.0,23,23,True,True,True,True
+2613600102,Andina (Cauca),True,-76.14997771,3.877505535,2360.0,catálogo,98.5,19,23,True,True,True,True
+2613600103,Andina (Cauca),True,-76.19739738,3.91940856,1644.0,catálogo,99.7,21,23,True,True,True,True
+2613600104,Andina (Cauca),True,-76.18418327,3.850471158,2000.0,catálogo,43.9,5,10,False,False,False,False
+2613600105,Andina (Cauca),True,-76.28495353,3.892253413,960.0,catálogo,100.0,23,23,True,True,True,True
+2613600301,Andina (Cauca),False,,,,,99.3,21,23,True,True,True,False
+2613800101,Andina (Cauca),True,-76.18106614,3.973012219,1221.0,catálogo,96.2,18,22,False,True,True,True
+2614100102,Andina (Cauca),False,,,,,90.9,18,21,False,True,True,False
+2614100103,Andina (Cauca),True,-76.00912775,3.945501934,2783.0,catálogo,98.9,20,23,True,True,True,True
+2614100104,Andina (Cauca),True,-76.02022396,3.900183617,1956.0,catálogo,100.0,23,23,True,True,True,True
+2614100202,Andina (Cauca),False,,,,,99.9,23,23,True,True,True,False
+2614100203,Andina (Cauca),False,,,,,95.7,20,22,True,True,True,False
+2614200101,Andina (Cauca),True,-76.07627003,4.028379519,1560.0,catálogo,98.9,22,22,True,True,True,True
+2614400101,Andina (Cauca),True,-75.86321462,4.080480934,2290.0,catálogo,92.0,16,21,False,True,True,True
+2614400102,Andina (Cauca),True,-76.14133883,4.212508513,942.0,catálogo,100.0,23,23,True,True,True,True
+2614400103,Andina (Cauca),True,-75.99464706,4.0543391,1640.0,SRTM 90 m,96.7,18,23,False,True,True,True
+2614400104,Andina (Cauca),True,-75.92723472,4.19097155,1663.0,catálogo,99.2,22,23,True,True,True,True
+2614400105,Andina (Cauca),True,-76.10071323,4.087270852,1288.0,SRTM 90 m,98.1,19,23,True,True,True,True
+2614400201,Andina (Cauca),False,,,,,93.8,19,21,True,True,True,False
+2614500101,Andina (Cauca),True,-76.07716933,4.302032614,947.0,SRTM 90 m,5.4,1,1,False,False,False,False
+2614500102,Andina (Cauca),True,-76.01881828,4.306940202,980.0,SRTM 90 m,99.2,21,23,True,True,True,True
+2614500103,Andina (Cauca),True,-76.00336114,4.176600197,1433.0,catálogo,45.3,8,10,False,False,True,True
+2614500104,Andina (Cauca),True,-76.05645255,4.171936238,1163.0,SRTM 90 m,98.3,21,22,True,True,True,True
+2614500201,Andina (Cauca),False,,,,,85.8,14,19,False,True,True,False
+2614900101,Andina (Cauca),True,-75.95964066,4.480446392,1025.0,catálogo,86.6,11,19,False,True,True,True
+2614900102,Andina (Cauca),True,-76.04692034,4.388366813,962.0,catálogo,89.6,20,20,True,True,True,True
+2614900201,Andina (Cauca),False,,,,,99.3,19,23,True,True,True,False
+2615000101,Andina (Cauca),True,-75.95499946,4.574968707,958.0,SRTM 90 m,80.9,14,19,False,True,True,True
+2615000102,Andina (Cauca),True,-75.92051381,4.583427474,1275.0,catálogo,90.9,17,21,False,True,True,True
+2615400102,Andina (Cauca),True,-75.90246415,4.28487681,1529.0,SRTM 90 m,74.8,11,16,False,True,True,True
+2615400103,Andina (Cauca),True,-75.94595958,4.751834269,913.0,catálogo,65.2,15,15,False,True,True,True
+2615400104,Andina (Cauca),True,-75.83486886,4.331602023,1213.0,SRTM 90 m,99.6,22,23,True,True,True,True
+2615400105,Andina (Cauca),True,-75.78616288,4.676447964,1229.0,SRTM 90 m,96.9,16,22,False,True,True,True
+2615400106,Andina (Cauca),True,-75.91705323,4.386127058,1186.0,SRTM 90 m,94.3,17,21,False,True,True,True
+2615400107,Andina (Cauca),True,-75.94315243,4.380980319,1024.0,catálogo,99.6,22,23,True,True,True,True
+2615400110,Andina (Cauca),True,-75.87505685,4.41015139,1035.0,SRTM 90 m,84.0,17,19,False,True,True,True
+2615400111,Andina (Cauca),True,-75.85113927,4.712183536,1100.0,catálogo,92.6,20,21,True,True,True,True
+2615400202,Andina (Cauca),False,,,,,96.7,20,22,True,True,True,False
+2620000101,Andina (Cauca),False,,,,,100.0,23,23,True,True,True,False
+2620000102,Andina (Cauca),False,,,,,99.0,20,23,True,True,True,False
+2620000103,Andina (Cauca),True,-76.49294383,3.44720725,956.0,catálogo,99.5,20,23,True,True,True,True
+2620000105,Andina (Cauca),True,-75.98942966,4.796746117,941.0,SRTM 90 m,80.7,17,18,False,True,True,True
+2620000106,Andina (Cauca),False,,,,,83.3,19,19,True,True,True,False
+2620000107,Andina (Cauca),False,,,,,87.0,20,20,True,True,True,False
+2620000108,Andina (Cauca),False,,,,,58.8,8,12,False,False,True,False
+2620000109,Andina (Cauca),False,,,,,99.2,19,23,True,True,True,False
+2620000110,Andina (Cauca),False,,,,,38.5,8,8,False,False,False,False
+2620000111,Andina (Cauca),True,-76.57736308,3.127054109,978.0,SRTM 90 m,18.6,3,4,False,False,False,False
+2620000201,Andina (Cauca),False,,,,,0.4,0,0,False,False,False,False
+2620000202,Andina (Cauca),False,,,,,100.0,23,23,True,True,True,False
+2620000203,Andina (Cauca),False,,,,,87.5,15,20,False,True,True,False
+2620000301,Andina (Cauca),False,,,,,99.8,22,23,True,True,True,False
+2620500201,Andina (Cauca),False,,,,,97.8,18,22,False,True,True,False
+2620610101,Andina (Cauca),False,,,,,64.0,13,15,False,True,True,False
+2620610102,Andina (Cauca),False,,,,,99.6,21,23,True,True,True,False
+2620610103,Andina (Cauca),False,,,,,81.7,17,19,False,True,True,False
+2620610202,Andina (Cauca),False,,,,,1.7,0,0,False,False,False,False
+2620610203,Andina (Cauca),False,,,,,30.4,7,7,False,False,False,False
+2620900101,Andina (Cauca),False,,,,,81.8,18,19,False,True,True,False
+2621500101,Andina (Cauca),True,-76.65925942,3.187029014,1505.0,catálogo,99.6,22,23,True,True,True,True
+2621500102,Andina (Cauca),False,,,,,22.9,5,5,False,False,False,False
+2621500103,Andina (Cauca),True,-76.73371861,3.137534326,1503.0,SRTM 90 m,99.2,20,23,True,True,True,True
+2621500104,Andina (Cauca),False,,,,,15.3,2,3,False,False,False,False
+2621500105,Andina (Cauca),False,,,,,15.4,3,3,False,False,False,False
+2621500301,Andina (Cauca),False,,,,,99.6,20,23,True,True,True,False
+2621900201,Andina (Cauca),False,,,,,33.8,7,7,False,False,False,False
+2622100102,Andina (Cauca),True,-76.52381105,3.289426828,950.0,catálogo,99.2,22,23,True,True,True,True
+2622100103,Andina (Cauca),True,-76.6260348,3.269463256,1442.0,catálogo,99.6,22,23,True,True,True,True
+2622100104,Andina (Cauca),True,-76.65316327,3.251710158,2100.0,catálogo,89.4,12,19,False,True,True,True
+2622100201,Andina (Cauca),False,,,,,50.5,10,11,False,True,True,False
+2622100301,Andina (Cauca),False,,,,,96.1,19,21,True,True,True,False
+2622110101,Andina (Cauca),True,-76.65082883,3.327440167,1794.0,catálogo,99.6,22,23,True,True,True,True
+2622110102,Andina (Cauca),True,-76.59941604,3.356426903,1365.0,catálogo,37.8,6,9,False,False,False,False
+2622110201,Andina (Cauca),False,,,,,99.4,21,23,True,True,True,False
+2622310101,Andina (Cauca),True,-76.57227619,3.357038823,1180.0,catálogo,78.6,12,18,False,True,True,True
+2622310201,Andina (Cauca),True,-76.59504237,3.373613371,1512.0,SRTM 90 m,10.1,2,2,False,False,False,False
+2622320101,Andina (Cauca),True,-76.5904977,3.391401808,1298.0,catálogo,98.1,21,22,True,True,True,True
+2622320102,Andina (Cauca),False,,,,,21.8,3,5,False,False,False,False
+2622320103,Andina (Cauca),True,-76.62104186,3.373360336,1705.0,catálogo,98.4,20,23,True,True,True,True
+2622320201,Andina (Cauca),False,,,,,94.6,15,21,False,True,True,False
+2622330101,Andina (Cauca),True,-76.53331758,3.44228234,1000.0,catálogo,98.5,16,23,False,True,True,True
+2622330102,Andina (Cauca),True,-76.57842024,3.411289958,1056.0,catálogo,95.8,13,23,False,True,True,True
+2622330103,Andina (Cauca),True,-76.60618567,3.429092445,1616.0,catálogo,11.8,1,3,False,False,False,False
+2622330104,Andina (Cauca),False,,,,,45.5,9,10,False,False,True,False
+2622330105,Andina (Cauca),True,-76.56845465,3.427707193,1312.0,catálogo,98.7,20,23,True,True,True,True
+2622330106,Andina (Cauca),True,-76.5883774,3.405494973,1228.0,catálogo,96.0,18,21,False,True,True,True
+2622330107,Andina (Cauca),False,,,,,86.5,18,20,False,True,True,False
+2622400101,Andina (Cauca),True,-76.53624253,3.460086223,1053.0,catálogo,97.9,17,23,False,True,True,True
+2622400102,Andina (Cauca),True,-76.63295199,3.452657202,1869.0,catálogo,43.8,7,10,False,False,False,False
+2622400103,Andina (Cauca),True,-76.54550868,3.445295234,1070.0,catálogo,99.3,21,23,True,True,True,True
+2622400104,Andina (Cauca),True,-76.62806572,3.452556218,1864.0,catálogo,99.0,20,23,True,True,True,True
+2622400105,Andina (Cauca),True,-76.51323771,3.463807708,960.0,catálogo,51.6,8,12,False,False,True,True
+2622400201,Andina (Cauca),False,,,,,97.2,15,23,False,True,True,False
+2622410102,Andina (Cauca),True,-76.60143859,3.438151047,1730.0,catálogo,97.1,21,22,True,True,True,True
+2622410104,Andina (Cauca),True,-76.66212702,3.415627632,2158.0,catálogo,96.9,17,23,False,True,True,True
+2622420101,Andina (Cauca),True,-76.55022532,3.487401536,1260.0,catálogo,100.0,23,23,True,True,True,True
+2622420102,Andina (Cauca),True,-76.62031821,3.517024588,1871.0,catálogo,99.6,21,23,True,True,True,True
+2622420103,Andina (Cauca),True,-76.60583149,3.506600656,1649.0,catálogo,97.9,18,23,False,True,True,True
+2622420104,Andina (Cauca),True,-76.5875274,3.530406655,2040.0,catálogo,97.5,20,22,True,True,True,True
+2622500101,Andina (Cauca),True,-76.55421802,3.560263246,1716.0,catálogo,97.7,20,22,True,True,True,True
+2622500102,Andina (Cauca),True,-76.50132745,3.518607003,959.0,SRTM 90 m,98.2,20,22,True,True,True,True
+2622600101,Andina (Cauca),True,-76.54715133,3.625354889,1511.0,catálogo,99.2,22,23,True,True,True,True
+2622600103,Andina (Cauca),True,-76.54955435,3.580332467,1730.0,catálogo,76.3,16,17,False,True,True,True
+2622600201,Andina (Cauca),False,,,,,99.5,21,23,True,True,True,False
+2622900101,Andina (Cauca),True,-76.47962799,3.71851819,1698.0,catálogo,99.5,22,23,True,True,True,True
+2622900102,Andina (Cauca),True,-76.50840515,3.699397157,1490.0,catálogo,87.5,19,20,True,True,True,True
+2622900301,Andina (Cauca),False,,,,,99.3,21,23,True,True,True,False
+2623300101,Andina (Cauca),True,-76.43024464,3.840527093,1566.0,catálogo,97.8,21,22,True,True,True,True
+2623300201,Andina (Cauca),False,,,,,87.6,19,20,True,True,True,False
+2623500101,Andina (Cauca),True,-76.41832795,3.929589545,1433.0,catálogo,100.0,23,23,True,True,True,True
+2623900102,Andina (Cauca),True,-76.37075237,4.039399363,1093.0,catálogo,44.4,8,10,False,False,False,False
+2624000101,Andina (Cauca),True,-76.41985601,4.112037256,1603.0,SRTM 90 m,77.2,17,17,False,True,True,True
+2624000102,Andina (Cauca),True,-76.27704208,4.141306571,1000.0,catálogo,100.0,23,23,True,True,True,True
+2624000103,Andina (Cauca),False,,,,,10.1,1,1,False,False,False,False
+2624000301,Andina (Cauca),False,,,,,87.7,14,19,False,True,True,False
+2624600101,Andina (Cauca),True,-76.1900875,4.330513885,948.0,SRTM 90 m,44.2,10,10,False,True,False,False
+2624600102,Andina (Cauca),True,-76.2347926,4.395985534,1640.0,catálogo,96.2,21,21,True,True,True,True
+2624600103,Andina (Cauca),True,-76.21799948,4.279000065,951.0,catálogo,100.0,23,23,True,True,True,True
+2624700103,Andina (Cauca),True,-76.09007386,4.608595339,990.0,catálogo,100.0,23,23,True,True,True,True
+2624700104,Andina (Cauca),True,-76.11612227,4.542706748,1020.0,catálogo,99.3,22,23,True,True,True,True
+2624700108,Andina (Cauca),True,-76.10732629,4.662609897,1807.0,catálogo,99.4,21,23,True,True,True,True
+2624700109,Andina (Cauca),True,-76.19171764,4.417099208,1357.0,catálogo,99.1,19,23,True,True,True,True
+2624700110,Andina (Cauca),True,-76.20049451,4.394796281,1400.0,catálogo,99.5,21,23,True,True,True,True
+2624700111,Andina (Cauca),False,,,,,45.4,9,10,False,False,True,False
+2624700112,Andina (Cauca),True,-76.06914637,4.603374448,957.0,catálogo,45.2,9,10,False,False,True,True
+2624700113,Andina (Cauca),True,-76.09980648,4.576956645,1240.0,catálogo,99.6,22,23,True,True,True,True
+2624700114,Andina (Cauca),True,-76.15854501,4.471227647,1750.0,catálogo,100.0,23,23,True,True,True,True
+2624700115,Andina (Cauca),True,-76.17426723,4.451229799,1460.0,catálogo,98.3,22,22,True,True,True,True
+2624700116,Andina (Cauca),True,-76.10718934,4.550413765,1346.0,catálogo,45.0,10,10,False,True,False,False
+2624700117,Andina (Cauca),True,-76.10917281,4.513792633,976.0,catálogo,100.0,23,23,True,True,True,True
+2624700118,Andina (Cauca),True,-76.13401195,4.589105289,1727.0,catálogo,100.0,23,23,True,True,True,True
+2624700119,Andina (Cauca),False,,,,,45.0,10,10,False,True,False,False
+2624700120,Andina (Cauca),True,-76.14652254,4.510551856,1380.0,catálogo,97.1,18,23,False,True,True,True
+2624700121,Andina (Cauca),True,-76.11454703,4.630726677,1514.0,catálogo,100.0,23,23,True,True,True,True
+2624700202,Andina (Cauca),False,,,,,96.4,20,22,True,True,True,False
+2624700203,Andina (Cauca),False,,,,,40.3,8,9,False,False,False,False
+2624700301,Andina (Cauca),False,,,,,99.2,21,23,True,True,True,False
+2625200101,Andina (Cauca),False,,,,,22.4,5,5,False,False,False,False
+2625500102,Andina (Cauca),True,-76.05013337,4.900536267,1813.0,catálogo,98.7,21,23,True,True,True,True
+5200000101,Pacífico,False,,,,,80.6,15,18,False,True,True,False
+5300000201,Pacífico,False,,,,,92.5,15,21,False,True,True,False
+5300000202,Pacífico,False,,,,,55.6,11,13,False,True,True,False
+5300000203,Pacífico,False,,,,,80.6,15,18,False,True,True,False
+5300200101,Pacífico,False,,,,,9.6,0,2,False,False,False,False
+5300600101,Pacífico,False,,,,,78.1,14,18,False,True,True,False
+5300600102,Pacífico,False,,,,,10.9,0,2,False,False,False,False
+5300800101,Pacífico,False,,,,,76.6,10,18,False,True,True,False
+5300900101,Pacífico,False,,,,,7.4,0,2,False,False,False,False
+5300900102,Pacífico,False,,,,,76.9,11,17,False,True,True,False
+5300900103,Pacífico,False,,,,,76.8,14,18,False,True,True,False
+5301000101,Pacífico,False,,,,,4.0,0,1,False,False,False,False
+5301000103,Pacífico,False,,,,,48.2,7,11,False,False,True,False
+5301000104,Pacífico,True,-77.28115354,3.142904599,20.0,catálogo,49.1,10,11,False,True,True,True
+5301100101,Pacífico,True,-77.3575914,3.373195479,13.0,SRTM 90 m,94.1,17,21,False,True,True,True
+5301300101,Pacífico,False,,,,,95.2,17,21,False,True,True,False
+5301400101,Pacífico,False,,,,,67.2,14,15,False,True,True,False
+5301400102,Pacífico,False,,,,,5.6,0,0,False,False,False,False
+5301400103,Pacífico,False,,,,,38.5,5,8,False,False,False,False
+5301400104,Pacífico,True,-76.84056411,3.593248471,314.0,SRTM 90 m,61.9,9,13,False,False,True,True
+5301400105,Pacífico,False,,,,,64.0,13,15,False,True,True,False
+5301400106,Pacífico,False,,,,,36.7,6,8,False,False,False,False
+5301400108,Pacífico,True,-76.87066424,3.581902672,650.0,catálogo,96.2,20,22,True,True,True,True
+5301420101,Pacífico,False,,,,,14.5,2,3,False,False,False,False
+5301420102,Pacífico,True,-76.77550496,3.535880731,880.0,SRTM 90 m,62.7,9,15,False,False,True,True
+5301420103,Pacífico,False,,,,,9.0,0,1,False,False,False,False
+5301420201,Pacífico,False,,,,,63.5,7,13,False,False,True,False
+5301500102,Pacífico,True,-76.66394376,3.761661279,702.0,catálogo,93.7,16,21,False,True,True,True
+5301500104,Pacífico,True,-76.57004299,3.653439815,1529.0,SRTM 90 m,25.1,1,6,False,False,False,False
+5301500105,Pacífico,False,,,,,14.1,2,2,False,False,False,False
+5301500106,Pacífico,True,-76.80607739,3.856769247,232.0,catálogo,89.1,15,19,False,True,True,True
+5301500107,Pacífico,True,-76.68770663,3.652622386,910.0,catálogo,89.1,19,20,True,True,True,True
+5301500108,Pacífico,True,-76.86325018,3.81381116,150.0,catálogo,44.3,5,10,False,False,False,False
+5301500109,Pacífico,True,-76.6013162,3.602086519,1531.0,SRTM 90 m,15.6,3,3,False,False,False,False
+5400000201,Pacífico,False,,,,,83.5,16,19,False,True,True,False
+5420410104,Pacífico,True,-76.20560056,4.652244903,1125.0,catálogo,2.3,0,0,False,False,False,False
+5420410107,Pacífico,True,-76.30834605,4.436192993,1750.0,catálogo,100.0,23,23,True,True,True,True
+5420410111,Pacífico,True,-76.24235082,4.732304668,1693.0,catálogo,38.8,6,8,False,False,False,False
+5420410112,Pacífico,True,-76.24343675,4.516212758,1376.0,catálogo,88.0,16,19,False,True,True,True
+5420410113,Pacífico,True,-76.14216168,4.677312126,1561.0,catálogo,92.5,17,21,False,True,True,True
+5420410114,Pacífico,True,-76.19795653,4.617500936,1395.0,catálogo,93.7,21,21,True,True,True,True
+5420410115,Pacífico,True,-76.26768771,4.596280717,990.0,catálogo,92.7,18,21,False,True,True,True
+5420410116,Pacífico,True,-76.23259246,4.666376848,1524.0,catálogo,93.4,20,21,True,True,True,True
+5420410117,Pacífico,True,-76.22480696,4.755852235,1850.0,catálogo,90.1,18,20,False,True,True,True
+5420410118,Pacífico,True,-76.38188497,4.298681413,1640.0,catálogo,90.7,20,21,True,True,True,True
+5420410202,Pacífico,False,,,,,70.0,13,15,False,True,True,False
+5420800101,Pacífico,False,,,,,3.9,0,0,False,False,False,False
+5421200102,Pacífico,False,,,,,6.6,1,1,False,False,False,False
+5421200104,Pacífico,False,,,,,3.1,0,0,False,False,False,False
+5421200105,Pacífico,True,-76.44433647,3.998270254,1571.0,SRTM 90 m,64.0,11,15,False,True,True,True
+5421200106,Pacífico,False,,,,,64.1,13,15,False,True,True,False
+5421200108,Pacífico,True,-76.53087574,3.924088688,2198.0,SRTM 90 m,65.6,15,15,False,True,True,True
+5421200109,Pacífico,True,-76.44191738,4.026739547,1708.0,SRTM 90 m,63.0,14,14,False,True,True,True
+5421200110,Pacífico,True,-76.69618828,3.947041644,515.0,catálogo,26.6,3,6,False,False,False,False
+5421200111,Pacífico,True,-76.69203701,3.935733464,601.0,SRTM 90 m,65.8,14,15,False,True,True,True
+5421200112,Pacífico,False,,,,,3.5,0,0,False,False,False,False
+5421200114,Pacífico,True,-76.49988116,4.038700614,2973.0,SRTM 90 m,56.7,12,13,False,True,True,True
+5421200201,Pacífico,False,,,,,71.6,12,14,False,True,True,False
+5421200202,Pacífico,False,,,,,28.4,4,7,False,False,False,False
+5421200203,Pacífico,False,,,,,59.0,12,13,False,True,True,False
+5421200204,Pacífico,False,,,,,64.7,12,15,False,True,True,False
+5421200205,Pacífico,False,,,,,15.2,2,3,False,False,False,False
+5421200206,Pacífico,False,,,,,35.8,5,8,False,False,False,False
+5421200207,Pacífico,False,,,,,40.5,3,7,False,False,False,False
+5421210101,Pacífico,True,-76.55395112,3.969024105,1520.0,catálogo,63.9,13,13,False,True,True,True
+5421220101,Pacífico,False,,,,,43.2,8,10,False,False,False,False
+5421240201,Pacífico,False,,,,,43.9,8,10,False,False,False,False

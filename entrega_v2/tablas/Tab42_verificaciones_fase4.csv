@@ -1,0 +1,23 @@
+verificacion,valor
+M_funciones_propias,5
+var_exp_%_El Niño,96.88543254893371
+var_exp_%_Neutral,96.1496408455763
+var_exp_%_La Niña,96.52696638047603
+RMSE_KAN_sintetica_exp(sin(pi x1)+x2^2),0.0019569214775994963
+max|lineal - regresion_funcional|,2.6645352591003757e-15
+pct_recortado_KAN,0.0005581784775682024
+estaciones_reservadas,14
+curvas_entrenamiento,1898
+curvas_prueba,750
+modelo_para_reservadas(elegido_por_CV),MLP
+neuronas_funcionales,6
+params_cabeza_KAN,395
+params_cabeza_MLP,397
+dif_params_%,0.5063291139240507
+lambda_rugosidad,0.01
+CV_lineal,0.3670644859631196
+CV_MLP,0.27271199718382916
+CV_KAN,0.2784661081184505
+hp_lineal,"{""lr"": 0.03}"
+hp_MLP,"{""lr"": 0.01, ""wd"": 0.0}"
+hp_KAN,"{""lr"": 0.01, ""lam"": 0.001}"

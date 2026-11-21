@@ -1,0 +1,11 @@
+paso,estaciones,pares_estacion_anio,dias_validos,ceros,valores_afectados,regla
+P0 crudo (1981-2013; 29-feb excluido),323,5514,1929453,1126184,,Registros tal como vienen en los archivos
+P1 valores imposibles,323,5514,1929452,1126184,1.0,"VALUE<0, no numérico o >1000 mm/día -> NaN"
+P2 totales mensuales en un día,323,5514,1929121,1125896,331.0,Mes con 1 solo día >0 (>=50 mm y >=50 % del total climatológico) donde la estación suele tener >=5 días de lluvia -> mes completo NaN
+P3 errores de digitación,323,5514,1929116,1125896,5.0,"VALUE > 3·P99.9(estación, años<=1995) y >150 mm -> NaN"
+P3b meses con escala errónea,323,5514,1929087,1125896,29.0,Total mensual > 5·P95 de los totales mensuales de la estación (años<=1995) -> mes NaN
+P3c bloques de 10 días copiados,323,5511,1926943,1125247,2144.0,Ventana de 10 días (>=6 con lluvia) idéntica en otra fecha de la estación -> ambas NaN
+P4 rachas >= 30 ceros (2 vecinas <= 25 km),323,5511,1924909,1123213,2034.0,Racha >=30 días en 0 mm; vecinas con lluvia (>=1 mm/día y >=20 % días >1 mm) -> falla -> NaN; vecinas secas -> sequía real (se conserva)
+P6 regla del periodo: >45 % de datos (nacional) y con coordenadas,141,3057,1082653,670400,182.0,Estación con >45 % de días con dato en 1981-2003 y coordenadas CVC dentro de la malla satelital
+P7 regla anual: año con <=25 % de faltantes,141,2945,1062509,659441,112.0,Año-estación con <=25 % de días faltantes (>=274 con dato); los demás años se descartan (no se imputan)
+P8 imputación (CSW; respaldo kriging radio 40 km),141,2945,1074820,663853,12311.0,"Días faltantes de los años elegidos imputados con CSW (|Δz|<=400 m, d<=20 km); sin donantes -> kriging d<=40 km; si no, NaN"
