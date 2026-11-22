@@ -9,7 +9,11 @@ mano, y se corrige el sesgo del satélite con **redes funcionales** (cabeza line
 **Entregable principal:** [`entrega/Proyecto final AnalíticaDeDatos.pdf`](entrega/Proyecto%20final%20Anal%C3%ADticaDeDatos.pdf) (15 páginas)
 
 ---
-
+| Nombre completo | Código | Correo institucional |
+|---|---|---|
+| César Armando Reyes Oliveros | 2236379 | cesar_armando.reyes@uao.edu.co |
+| Yesenia Díaz | 2231783 |yesenia.diaz@uao.edu.co |
+| Juan Pablo Maya | 2236377 |juan_pablo.maya@uao.edu.co |
 ## Resultados principales
 
 | Hallazgo | Cifra |
