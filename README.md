@@ -6,7 +6,7 @@ Se modela la lluvia diaria de **141 estaciones** de la red CVC (1981-2003) y el 
 satelital pentadal de 0,05° como **curvas anuales** sobre una base B-spline construida a
 mano, y se corrige el sesgo del satélite con **redes funcionales** (cabeza lineal, MLP y KAN).
 
-**Entregable principal:** [`entrega/Proyecto final AnalíticaDeDatos.pdf`](entrega/Proyecto%20final%20Anal%C3%ADticaDeDatos.pdf) (15 páginas)
+
 
 ---
 | Nombre completo | Código | Correo institucional |
