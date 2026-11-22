@@ -1903,7 +1903,7 @@ def fase3b():
 
 
 # =====================================================================================
-# INTERFAZ PARA LA FASE 4 (red funcional, KAN/MLP/lineal) — la implementa otro equipo/agente
+# INTERFAZ PARA LA FASE 4 (red funcional: cabezas KAN, MLP y lineal)
 # =====================================================================================
 
 def interfaz_fase4():
