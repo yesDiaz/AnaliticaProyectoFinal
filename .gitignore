@@ -16,3 +16,7 @@ entrega/cache/
 .Rproj.user/
 .ipynb_checkpoints/
 *~
+
+# basura de macOS
+._*
+.DS_Store
